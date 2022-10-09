@@ -1,0 +1,284 @@
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Mis pruebas (master)
+$ node HolaMundo
+HELLO WORLD
+modifico despues del: git add HolaMundo.js y pedire un: git status
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Mis pruebas (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   HolaMundo.js
+        new file:   Mi primer programa.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   HolaMundo.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Captura2.JPG
+        Desktop.ini
+        mintty.2022-10-08_13-01-45.png
+        mintty.2022-10-08_19-14-21.png
+        mintty.2022-10-08_19-18-29.png
+        mintty.2022-10-08_19-19-58.png
+
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Mis pruebas (master)
+$ git add HolaMundo.js
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Mis pruebas (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   HolaMundo.js
+        new file:   Mi primer programa.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Captura2.JPG
+        Desktop.ini
+        mintty.2022-10-08_13-01-45.png
+        mintty.2022-10-08_19-14-21.png
+        mintty.2022-10-08_19-18-29.png
+        mintty.2022-10-08_19-19-58.png
+
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Mis pruebas (master)
+$ git commit -m 'adds my first program in JS and process s details'
+[master (root-commit) 6dbd67a] adds my first program in JS and process s details
+ 2 files changed, 168 insertions(+)
+ create mode 100644 HolaMundo.js
+ create mode 100644 Mi primer programa.txt
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Mis pruebas (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Captura2.JPG
+        Desktop.ini
+        mintty.2022-10-08_13-01-45.png
+        mintty.2022-10-08_19-14-21.png
+        mintty.2022-10-08_19-18-29.png
+        mintty.2022-10-08_19-19-58.png
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Mis pruebas (master)
+$ git log
+commit 6dbd67a5678082ee4c69dcd2027cb97f2a150ec0 (HEAD -> master)
+Author: unknown <echerodrigo@yahoo.com>
+Date:   Sat Oct 8 19:34:35 2022 -0300
+
+    adds my first program in JS and process s details
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Mis pruebas (master)
+$ git config --global user.name 'Rodrigo Eche'
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Mis pruebas (master)
+$ git log
+commit 6dbd67a5678082ee4c69dcd2027cb97f2a150ec0 (HEAD -> master)
+Author: unknown <echerodrigo@yahoo.com>
+Date:   Sat Oct 8 19:34:35 2022 -0300
+
+    adds my first program in JS and process s details
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Mis pruebas (master)
+$ git commit -m 'adds my first program in JS and process s details'
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Captura2.JPG
+        Desktop.ini
+        mintty.2022-10-08_13-01-45.png
+        mintty.2022-10-08_19-14-21.png
+        mintty.2022-10-08_19-18-29.png
+        mintty.2022-10-08_19-19-58.png
+        mintty.2022-10-08_19-35-39.png
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Mis pruebas (master)
+$ git log
+commit 6dbd67a5678082ee4c69dcd2027cb97f2a150ec0 (HEAD -> master)
+Author: unknown <echerodrigo@yahoo.com>
+Date:   Sat Oct 8 19:34:35 2022 -0300
+
+    adds my first program in JS and process s details
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Mis pruebas (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   HolaMundo.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Captura2.JPG
+        Desktop.ini
+        mintty.2022-10-08_13-01-45.png
+        mintty.2022-10-08_19-14-21.png
+        mintty.2022-10-08_19-18-29.png
+        mintty.2022-10-08_19-19-58.png
+        mintty.2022-10-08_19-35-39.png
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Mis pruebas (master)
+$ git add HolaMundo.js
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Mis pruebas (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   HolaMundo.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Captura2.JPG
+        Desktop.ini
+        mintty.2022-10-08_13-01-45.png
+        mintty.2022-10-08_19-14-21.png
+        mintty.2022-10-08_19-18-29.png
+        mintty.2022-10-08_19-19-58.png
+        mintty.2022-10-08_19-35-39.png
+
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Mis pruebas (master)
+$ git commit -m 'adds my first program in JS and process s details'
+[master 88e7e78] adds my first program in JS and process s details
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Mis pruebas (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Captura2.JPG
+        Desktop.ini
+        mintty.2022-10-08_13-01-45.png
+        mintty.2022-10-08_19-14-21.png
+        mintty.2022-10-08_19-18-29.png
+        mintty.2022-10-08_19-19-58.png
+        mintty.2022-10-08_19-35-39.png
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Mis pruebas (master)
+$ git commit -m 'adds my first program in JS and process s details'
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Captura2.JPG
+        Desktop.ini
+        mintty.2022-10-08_13-01-45.png
+        mintty.2022-10-08_19-14-21.png
+        mintty.2022-10-08_19-18-29.png
+        mintty.2022-10-08_19-19-58.png
+        mintty.2022-10-08_19-35-39.png
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Mis pruebas (master)
+$ git log
+commit 88e7e78b73cbed59a79ef3c4ca197ecab5005037 (HEAD -> master)
+Author: Rodrigo Eche <echerodrigo@yahoo.com>
+Date:   Sat Oct 8 19:41:33 2022 -0300
+
+    adds my first program in JS and process s details
+
+commit 6dbd67a5678082ee4c69dcd2027cb97f2a150ec0
+Author: unknown <echerodrigo@yahoo.com>
+Date:   Sat Oct 8 19:34:35 2022 -0300
+
+    adds my first program in JS and process s details
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Mis pruebas (master)
+$
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Mis pruebas (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Captura2.JPG
+        Desktop.ini
+        Historial de comandos git.txt
+        mintty.2022-10-08_13-01-45.png
+        mintty.2022-10-08_19-14-21.png
+        mintty.2022-10-08_19-18-29.png
+        mintty.2022-10-08_19-19-58.png
+        mintty.2022-10-08_19-35-39.png
+        mintty.2022-10-08_19-43-41.png
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Mis pruebas (master)
+$ git add .
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Mis pruebas (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Captura2.JPG
+        new file:   Desktop.ini
+        new file:   Historial de comandos git.txt
+        new file:   mintty.2022-10-08_13-01-45.png
+        new file:   mintty.2022-10-08_19-14-21.png
+        new file:   mintty.2022-10-08_19-18-29.png
+        new file:   mintty.2022-10-08_19-19-58.png
+        new file:   mintty.2022-10-08_19-35-39.png
+        new file:   mintty.2022-10-08_19-43-41.png
+
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Mis pruebas (master)
+$ git restore --staged .
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Mis pruebas (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Captura2.JPG
+        Desktop.ini
+        Historial de comandos git.txt
+        mintty.2022-10-08_13-01-45.png
+        mintty.2022-10-08_19-14-21.png
+        mintty.2022-10-08_19-18-29.png
+        mintty.2022-10-08_19-19-58.png
+        mintty.2022-10-08_19-35-39.png
+        mintty.2022-10-08_19-43-41.png
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Mis pruebas (master)
+$ git log
+commit 88e7e78b73cbed59a79ef3c4ca197ecab5005037 (HEAD -> master)
+Author: Rodrigo Eche <echerodrigo@yahoo.com>
+Date:   Sat Oct 8 19:41:33 2022 -0300
+
+    adds my first program in JS and process s details
+
+commit 6dbd67a5678082ee4c69dcd2027cb97f2a150ec0
+Author: unknown <echerodrigo@yahoo.com>
+Date:   Sat Oct 8 19:34:35 2022 -0300
+
+    adds my first program in JS and process s details
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Mis pruebas (master)
+$

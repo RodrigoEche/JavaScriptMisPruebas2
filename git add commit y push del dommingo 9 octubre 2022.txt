@@ -1,0 +1,175 @@
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Prep-Course (main)
+$
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Prep-Course (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Prep-Course (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   02-JS-I/homework/homework.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Prep-Course (main)
+$ git add .
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Prep-Course (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   02-JS-I/homework/homework.js
+
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Prep-Course (main)
+$ git commit
+hint: Waiting for your editor to close the file...
+Aborting commit due to empty commit message.
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Prep-Course (main)
+$ git commit 'homework.js in the folder JSI modified by Notepad and recommited'
+error: pathspec 'homework.js in the folder JSI modified by Notepad and recommited' did not match any file(s) known to git
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Prep-Course (main)
+$ git commit 'homeworkjs in the folder JSI modified by Notepad and recommited'
+error: pathspec 'homeworkjs in the folder JSI modified by Notepad and recommited' did not match any file(s) known to git
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Prep-Course (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   02-JS-I/homework/homework.js
+
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Prep-Course (main)
+$ git add .
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Prep-Course (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   02-JS-I/homework/homework.js
+
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Prep-Course (main)
+$ git commit 'homeworkjs in the folder JSI modified by Notepad and recommited'
+error: pathspec 'homeworkjs in the folder JSI modified by Notepad and recommited' did not match any file(s) known to git
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Prep-Course (main)
+$ git commit -M 'homeworkjs in the folder JSI modified by Notepad and recommited'
+error: unknown switch `M'
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup [(amend|reword):]commit
+                          use autosquash formatted message to fixup or amend/reword specified commit
+    --squash <commit>     use autosquash formatted message to squash specified commit
+    --reset-author        the commit is authored by me now (used with -C/-c/--amend)
+    --trailer <trailer>   add custom trailer(s)
+    -s, --signoff         add a Signed-off-by trailer
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit and commit-msg hooks
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --ahead-behind        compute full ahead/behind values
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Prep-Course (main)
+$ git commit -m 'homeworkjs in the folder JSI modified by Notepad and recommited'
+[main 42b3b59] homeworkjs in the folder JSI modified by Notepad and recommited
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Prep-Course (main)
+$ git commit -m 'homework.js file in the folder JSI modified by Notepad and recommited'
+On branch main
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Prep-Course (main)
+$
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Prep-Course (main)
+$ push origin master
+bash: push: command not found
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Prep-Course (main)
+$ git push origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/RodrigoEche/Prep-Course.git'
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Prep-Course (main)
+$ Git push https://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@github.com/RodrigoEche/Prep-Course
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 505 bytes | 505.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/RodrigoEche/Prep-Course
+   447e49d..42b3b59  main -> main
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Prep-Course (main)
+$

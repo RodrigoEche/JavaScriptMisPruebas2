@@ -1,0 +1,1274 @@
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Prep-Course (main)
+$ npm install                                                 <----- INSTALO LAS DEPENDENCIAS DEL PROYECTO (CREO QUE HACE ESO)
+
+up to date, audited 901 packages in 20s
+
+127 packages are looking for funding
+  run `npm fund` for details
+
+10 vulnerabilities (4 moderate, 3 high, 3 critical)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues possible (including breaking changes), run:
+  npm audit fix --force
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Prep-Course (main)
+$
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Prep-Course (main)
+$ npm test JSI.test.js                                               <----- TESTEO USANDO EL PAQUETE test EL EJERCICIO JSI.test.js
+
+> prep@1.0.0 test
+> jest --collectCoverage=false --testResultsProcessor ./.reporter/index.js --detectOpenHandles
+
+FAIL 02-JS-I/homework/tests/JSI.test.js
+  nuevaString
+    √ Deberia ser un string (37 ms)                       <----- TILDE DE OK INDICA QUE PASO ESTE SOLO EJERCICIO
+  nuevoNum
+    × Deberia ser un numero (7 ms)                        <----- CRUZ x INDICA QUE NO PASO EL TEST
+  nuevoBool
+    × Deberia ser un booleano (3 ms)
+  nuevaResta
+    × Deberia ser un booleano (1 ms)
+  nuevaMultiplicacion
+    × Deberia ser un booleano (2 ms)
+  nuevoModulo
+    × Deberia ser un booleano (1 ms)
+  devolverString(str)
+    × Deberia devolver el string provisto (1 ms)
+  suma(x, y)
+    × Deberia devolver la suma de los dos argumentos (1 ms)
+  resta(x, y)
+    × Deberia devolver la diferencia de los dos argumentos (2 ms)
+  divide(x, y)
+    × Deberia devolver la division de los dos argumentos (1 ms)
+  multiplica(x, y)
+    × Deberia devolver el producto de los dos argumentos (1 ms)
+  sonIguales(x, y)
+    × Deberia devolver true si los argumentos son iguales y sino false (2 ms)
+  tienenMismaLongitud(str1, str2)
+    × Deberia devolver true si los strings tienen la misma longitud y sino false (3 ms)
+  menosQueNoventa(num)
+    × Deberia devolver true si el numero es menor a noventa sino false (2 ms)
+  mayorQueCincuenta(num)
+    × Deberia devolver true si el numero es mayor a cincuenta sino false (6 ms)
+  obtenerResto(x, y)
+    × Deberia devolver el resto de dividir x sobre y (2 ms)
+  esPar(num)
+    × Deberia devolver true si el numero es par sino false (1 ms)
+  esImpar(num)
+    × Deberia devolver true si el numero es impar sino false (1 ms)
+  elevarAlCuadrado(num)
+    × Deberia devolver el numero elevado al cuadrado (1 ms)
+  elevarAlCubo(num)
+    × Deberia devolver el numero elevado al cubo (1 ms)
+  elevar(num, exponent)
+    × Deberia devolver el numero elevado al exponente indicado (1 ms)
+  redondearNumero(num)
+    × Deberia devolver el numero redondeado (1 ms)
+  redondearHaciaArriba(num)
+    × Deberia devolver el numero redondeado para arriba (1 ms)
+  numeroRandom()
+    × Debería devolver un número entre 0 y 1 (1 ms)
+  esPositivo(numero)
+    × Debería devolver el string Es positivo ó Es negativo según corresponda (1 ms)
+  agregarSimboloExclamacion(str)
+    × Deberia agregar un signo de exclamacion al final del string (2 ms)
+  combinarNombres(firstName, lastName)
+    × Deberia devolver los strings combinados con un espacio en el medio (2 ms)
+  obtenerSaludo(name)
+    × Deberia devolver el string 'Hola {name}!' (1 ms)
+  obtenerAreaRectangulo(alto, ancho)
+    × Deberia retornar el area correcta del rectangulo (2 ms)
+  retornarPerimetro(lado)
+    × Deberia retornar el perímetro correcto del cuadrado (6 ms)
+  areaDelTriangulo( base, altura)
+    × Deberia retornar el area correcta del triángulo (1 ms)
+  deEuroAdolar(euro)
+    × Deberia retornar el valor correcto de euro a dolar (1 ms)
+  esVocal(letra)
+    × Deberia devolver el string "Dato incorrecto", si el valor ingresado tiene más de una letra (1 ms)
+    × Deberia devolver el string "Dato incorrecto", si el valor ingresado no es vocal (1 ms)
+    × Deberia devolver el string "Es vocal", si el valor ingresado lo es (2 ms)
+
+  ● nuevoNum › Deberia ser un numero
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "number"
+    Received: "object"
+
+      44 | describe('nuevoNum', function() {
+      45 |   it('Deberia ser un numero', function() {
+    > 46 |     expect(typeof nuevoNum).toBe('number');
+         |                             ^
+      47 |   });
+      48 | });
+      49 |
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:46:29)
+
+  ● nuevoBool › Deberia ser un booleano
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "boolean"
+    Received: "object"
+
+      50 | describe('nuevoBool', function() {
+      51 |   it('Deberia ser un booleano', function() {
+    > 52 |     expect(typeof nuevoBool).toBe('boolean');
+         |                              ^
+      53 |   });
+      54 | });
+      55 |
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:52:30)
+
+  ● nuevaResta › Deberia ser un booleano
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      56 | describe('nuevaResta', function() {
+      57 |   it('Deberia ser un booleano', function() {
+    > 58 |     expect(nuevaResta).toBe(true);
+         |                        ^
+      59 |   });
+      60 | });
+      61 |
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:58:24)
+
+  ● nuevaMultiplicacion › Deberia ser un booleano
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      62 | describe('nuevaMultiplicacion', function() {
+      63 |   it('Deberia ser un booleano', function() {
+    > 64 |     expect(nuevaMultiplicacion).toBe(true);
+         |                                 ^
+      65 |   });
+      66 | });
+      67 |
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:64:33)
+
+  ● nuevoModulo › Deberia ser un booleano
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      68 | describe('nuevoModulo', function() {
+      69 |   it('Deberia ser un booleano', function() {
+    > 70 |     expect(nuevoModulo).toBe(true);
+         |                         ^
+      71 |   });
+      72 | });
+      73 |
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:70:25)
+
+  ● devolverString(str) › Deberia devolver el string provisto
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "Henry"
+    Received: undefined
+
+      75 |   it('Deberia devolver el string provisto', function() {
+      76 |     let string = 'Henry';
+    > 77 |     expect(devolverString(string)).toBe(string);
+         |                                    ^
+      78 |   });
+      79 | });
+      80 |
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:77:36)
+
+  ● suma(x, y) › Deberia devolver la suma de los dos argumentos
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 10
+    Received: undefined
+
+      81 | describe('suma(x, y)', function() {
+      82 |   it('Deberia devolver la suma de los dos argumentos', function() {
+    > 83 |     expect(suma(5, 5)).toBe(10);
+         |                        ^
+      84 |     expect(suma(-1, 5)).toBe(4);
+      85 |   });
+      86 | });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:83:24)
+
+  ● resta(x, y) › Deberia devolver la diferencia de los dos argumentos
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: undefined
+
+      88 | describe('resta(x, y)', function() {
+      89 |   it('Deberia devolver la diferencia de los dos argumentos', function() {
+    > 90 |     expect(resta(5, 5)).toBe(0);
+         |                         ^
+      91 |     expect(resta(-1, 5)).toBe(-6);
+      92 |     expect(resta(5, -5)).toBe(10);
+      93 |     expect(resta(0, 0)).toBe(0);
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:90:25)
+
+  ● divide(x, y) › Deberia devolver la division de los dos argumentos
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: undefined
+
+       97 | describe('divide(x, y)', function() {
+       98 |   it('Deberia devolver la division de los dos argumentos', function() {
+    >  99 |     expect(divide(5, 5)).toBe(1);
+          |                          ^
+      100 |     expect(divide(10, 5)).toBe(2);
+      101 |     expect(divide(11, 2)).toBe(5.5);
+      102 |   });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:99:26)
+
+  ● multiplica(x, y) › Deberia devolver el producto de los dos argumentos
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 25
+    Received: undefined
+
+      105 | describe('multiplica(x, y)', function() {
+      106 |   it('Deberia devolver el producto de los dos argumentos', function() {
+    > 107 |     expect(multiplica(5, 5)).toBe(25);
+          |                              ^
+      108 |     expect(multiplica(10, -5)).toBe(-50);
+      109 |     expect(multiplica(11, 0)).toBe(0);
+      110 |   });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:107:30)
+
+  ● sonIguales(x, y) › Deberia devolver true si los argumentos son iguales y sino false
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: undefined
+
+      114 | describe('sonIguales(x, y)', function() {
+      115 |   it('Deberia devolver true si los argumentos son iguales y sino false', function() {
+    > 116 |     expect(sonIguales(15, 15)).toBe(true);
+          |                                ^
+      117 |     expect(sonIguales(90, 50)).toBe(false);
+      118 |     expect(sonIguales('test', 'test')).toBe(true);
+      119 |   });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:116:32)
+
+  ● tienenMismaLongitud(str1, str2) › Deberia devolver true si los strings tienen la misma longitud y sino false
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: undefined
+
+      122 | describe('tienenMismaLongitud(str1, str2)', function() {
+      123 |   it('Deberia devolver true si los strings tienen la misma longitud y sino false', function() {
+    > 124 |     expect(tienenMismaLongitud('hi', 'there')).toBe(false);
+          |                                                ^
+      125 |     expect(tienenMismaLongitud('javascript', 'bumfuzzled')).toBe(true);
+      126 |   });
+      127 | });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:124:48)
+
+  ● menosQueNoventa(num) › Deberia devolver true si el numero es menor a noventa sino false
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: undefined
+
+      129 | describe('menosQueNoventa(num)', function() {
+      130 |   it('Deberia devolver true si el numero es menor a noventa sino false', function() {
+    > 131 |     expect(menosQueNoventa(15)).toBe(true);
+          |                                 ^
+      132 |     expect(menosQueNoventa(90)).toBe(false);
+      133 |     expect(menosQueNoventa(100)).toBe(false);
+      134 |   });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:131:33)
+
+  ● mayorQueCincuenta(num) › Deberia devolver true si el numero es mayor a cincuenta sino false
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: undefined
+
+      137 | describe('mayorQueCincuenta(num)', function() {
+      138 |   it('Deberia devolver true si el numero es mayor a cincuenta sino false', function() {
+    > 139 |     expect(mayorQueCincuenta(15)).toBe(false);
+          |                                   ^
+      140 |     expect(mayorQueCincuenta(50)).toBe(false);
+      141 |     expect(mayorQueCincuenta(60)).toBe(true);
+      142 |   });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:139:35)
+
+  ● obtenerResto(x, y) › Deberia devolver el resto de dividir x sobre y
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: undefined
+
+      145 | describe('obtenerResto(x, y)', function() {
+      146 |   it('Deberia devolver el resto de dividir x sobre y', function() {
+    > 147 |     expect(obtenerResto(15, 5)).toBe(0);
+          |                                 ^
+      148 |     expect(obtenerResto(21, 5)).toBe(1);
+      149 |     expect(obtenerResto(22, 5)).toBe(2);
+      150 |   });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:147:33)
+
+  ● esPar(num) › Deberia devolver true si el numero es par sino false
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: undefined
+
+      153 | describe('esPar(num)', function() {
+      154 |   it('Deberia devolver true si el numero es par sino false', function() {
+    > 155 |     expect(esPar(6)).toBe(true);
+          |                      ^
+      156 |     expect(esPar(7)).toBe(false);
+      157 |     expect(esPar(0)).toBe(true);
+      158 |   });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:155:22)
+
+  ● esImpar(num) › Deberia devolver true si el numero es impar sino false
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: undefined
+
+      161 | describe('esImpar(num)', function() {
+      162 |   it('Deberia devolver true si el numero es impar sino false', function() {
+    > 163 |     expect(esImpar(6)).toBe(false);
+          |                        ^
+      164 |     expect(esImpar(7)).toBe(true);
+      165 |     expect(esImpar(0)).toBe(false);
+      166 |   });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:163:24)
+
+  ● elevarAlCuadrado(num) › Deberia devolver el numero elevado al cuadrado
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 36
+    Received: undefined
+
+      169 | describe('elevarAlCuadrado(num)', function() {
+      170 |   it('Deberia devolver el numero elevado al cuadrado', function() {
+    > 171 |     expect(elevarAlCuadrado(6)).toBe(36);
+          |                                 ^
+      172 |     expect(elevarAlCuadrado(7)).toBe(49);
+      173 |     expect(elevarAlCuadrado(0)).toBe(0);
+      174 |     expect(elevarAlCuadrado(-5)).toBe(25);
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:171:33)
+
+  ● elevarAlCubo(num) › Deberia devolver el numero elevado al cubo
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 27
+    Received: undefined
+
+      178 | describe('elevarAlCubo(num)', function() {
+      179 |   it('Deberia devolver el numero elevado al cubo', function() {
+    > 180 |     expect(elevarAlCubo(3)).toBe(27);
+          |                             ^
+      181 |     expect(elevarAlCubo(0)).toBe(0);
+      182 |     expect(elevarAlCubo(-5)).toBe(-125);
+      183 |   });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:180:29)
+
+  ● elevar(num, exponent) › Deberia devolver el numero elevado al exponente indicado
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 4
+    Received: undefined
+
+      186 | describe('elevar(num, exponent)', function() {
+      187 |   it('Deberia devolver el numero elevado al exponente indicado', function() {
+    > 188 |     expect(elevar(2, 2)).toBe(4);
+          |                          ^
+      189 |     expect(elevar(2, 3)).toBe(8);
+      190 |     expect(elevar(0, 5)).toBe(0);
+      191 |     expect(elevar(10, 1)).toBe(10);
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:188:26)
+
+  ● redondearNumero(num) › Deberia devolver el numero redondeado
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: undefined
+
+      195 | describe('redondearNumero(num)', function() {
+      196 |   it('Deberia devolver el numero redondeado', function() {
+    > 197 |     expect(redondearNumero(1.5)).toBe(2);
+          |                                  ^
+      198 |     expect(redondearNumero(2)).toBe(2);
+      199 |     expect(redondearNumero(0.1)).toBe(0);
+      200 |   });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:197:34)
+
+  ● redondearHaciaArriba(num) › Deberia devolver el numero redondeado para arriba
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: undefined
+
+      203 | describe('redondearHaciaArriba(num)', function() {
+      204 |   it('Deberia devolver el numero redondeado para arriba', function() {
+    > 205 |     expect(redondearHaciaArriba(1.5)).toBe(2);
+          |                                       ^
+      206 |     expect(redondearHaciaArriba(2)).toBe(2);
+      207 |     expect(redondearHaciaArriba(0.1)).toBe(1);
+      208 |   });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:205:39)
+
+  ● numeroRandom() › Debería devolver un número entre 0 y 1
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "number"
+    Received: "undefined"
+
+      211 | describe('numeroRandom()', function() {
+      212 |   it('Debería devolver un número entre 0 y 1', function() {
+    > 213 |     expect(typeof numeroRandom()).toBe('number');
+          |                                   ^
+      214 |     expect(numeroRandom()).toBeGreaterThanOrEqual(0);
+      215 |     expect(numeroRandom()).toBeLessThan(1);
+      216 |   });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:213:35)
+
+  ● esPositivo(numero) › Debería devolver el string Es positivo ó Es negativo según corresponda
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: undefined
+
+      219 | describe('esPositivo(numero)', function() {
+      220 |   it('Debería devolver el string \Es positivo ó Es negativo\ según corresponda', function() {
+    > 221 |     expect(esPositivo(0)).toBe(false);
+          |                           ^
+      222 |     expect(esPositivo(23)).toBe('Es positivo');
+      223 |     expect(esPositivo(-2)).toBe('Es negativo');
+      224 |   });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:221:27)
+
+  ● agregarSimboloExclamacion(str) › Deberia agregar un signo de exclamacion al final del string
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "hello world!"
+    Received: undefined
+
+      227 | describe('agregarSimboloExclamacion(str)', function() {
+      228 |   it('Deberia agregar un signo de exclamacion al final del string', function() {
+    > 229 |     expect(agregarSimboloExclamacion('hello world')).toBe('hello world!');
+          |                                                      ^
+      230 |     expect(agregarSimboloExclamacion('Soy Henry')).toBe('Soy Henry!');
+      231 |   });
+      232 | });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:229:54)
+
+  ● combinarNombres(firstName, lastName) › Deberia devolver los strings combinados con un espacio en el medio
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "hello world"
+    Received: undefined
+
+      234 | describe('combinarNombres(firstName, lastName)', function() {
+      235 |   it('Deberia devolver los strings combinados con un espacio en el medio', function() {
+    > 236 |     expect(combinarNombres('hello', 'world')).toBe('hello world');
+          |                                               ^
+      237 |     expect(combinarNombres('Soy', 'Henry')).toBe('Soy Henry');
+      238 |   });
+      239 | });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:236:47)
+
+  ● obtenerSaludo(name) › Deberia devolver el string 'Hola {name}!'
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "Hola Martin!"
+    Received: undefined
+
+      241 | describe('obtenerSaludo(name)', function() {
+      242 |   it('Deberia devolver el string \'Hola {name}!\'', function() {
+    > 243 |     expect(obtenerSaludo('Martin')).toBe('Hola Martin!');
+          |                                     ^
+      244 |     expect(obtenerSaludo('Antonio')).toBe('Hola Antonio!');
+      245 |   });
+      246 | });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:243:37)
+
+  ● obtenerAreaRectangulo(alto, ancho) › Deberia retornar el area correcta del rectangulo
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 4
+    Received: undefined
+
+      248 | describe('obtenerAreaRectangulo(alto, ancho)', function() {
+      249 |   it('Deberia retornar el area correcta del rectangulo', function() {
+    > 250 |     expect(obtenerAreaRectangulo(2, 2)).toBe(4);
+          |                                         ^
+      251 |     expect(obtenerAreaRectangulo(3, 6)).toBe(18);
+      252 |     expect(obtenerAreaRectangulo(0, 2)).toBe(0);
+      253 |   });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:250:41)
+
+  ● retornarPerimetro(lado) › Deberia retornar el perímetro correcto del cuadrado
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 8
+    Received: undefined
+
+      256 | describe('retornarPerimetro(lado)', function() {
+      257 |   it('Deberia retornar el perímetro correcto del cuadrado', function() {
+    > 258 |     expect(retornarPerimetro(2)).toBe(8);
+          |                                  ^
+      259 |     expect(retornarPerimetro(8)).toBe(32);
+      260 |     expect(retornarPerimetro(0)).toBe(0);
+      261 |   });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:258:34)
+
+  ● areaDelTriangulo( base, altura) › Deberia retornar el area correcta del triángulo
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 25
+    Received: undefined
+
+      265 | describe('areaDelTriangulo( base, altura)', function() {
+      266 |   it('Deberia retornar el area correcta del triángulo', function() {
+    > 267 |     expect(areaDelTriangulo(10, 5)).toBe(25);
+          |                                     ^
+      268 |     expect(areaDelTriangulo(20, 10)).toBe(100);
+      269 |     expect(areaDelTriangulo(0, 10)).toBe(0);
+      270 |   });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:267:37)
+
+  ● deEuroAdolar(euro) › Deberia retornar el valor correcto de euro a dolar
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 120
+    Received: undefined
+
+      273 | describe('deEuroAdolar(euro)', function() {
+      274 |   it('Deberia retornar el valor correcto de euro a dolar', function() {
+    > 275 |     expect(deEuroAdolar(100)).toBe(120);
+          |                               ^
+      276 |     expect(deEuroAdolar(200)).toBe(240);
+      277 |     expect(deEuroAdolar(50)).toBe(60);
+      278 |   });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:275:31)
+
+  ● esVocal(letra) › Deberia devolver el string "Dato incorrecto", si el valor ingresado tiene más de una letra
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "Dato incorrecto"
+    Received: undefined
+
+      281 | describe('esVocal(letra)', function() {
+      282 |   it('Deberia devolver el string "Dato incorrecto", si el valor ingresado tiene más de una letra', function() {
+    > 283 |     expect(esVocal("la")).toBe("Dato incorrecto");
+          |                           ^
+      284 |     expect(esVocal("pero")).toBe("Dato incorrecto");
+      285 |   });
+      286 |   it('Deberia devolver el string "Dato incorrecto", si el valor ingresado no es vocal', function() {
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:283:27)
+
+  ● esVocal(letra) › Deberia devolver el string "Dato incorrecto", si el valor ingresado no es vocal
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "Dato incorrecto"
+    Received: undefined
+
+      285 |   });
+      286 |   it('Deberia devolver el string "Dato incorrecto", si el valor ingresado no es vocal', function() {
+    > 287 |     expect(esVocal("l")).toBe("Dato incorrecto");
+          |                          ^
+      288 |     expect(esVocal("p")).toBe("Dato incorrecto");
+      289 |   });
+      290 |   it('Deberia devolver el string "Es vocal", si el valor ingresado lo es', function() {
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:287:26)
+
+  ● esVocal(letra) › Deberia devolver el string "Es vocal", si el valor ingresado lo es
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "Es vocal"
+    Received: undefined
+
+      289 |   });
+      290 |   it('Deberia devolver el string "Es vocal", si el valor ingresado lo es', function() {
+    > 291 |     expect(esVocal('a')).toBe('Es vocal');
+          |                          ^
+      292 |     expect(esVocal('e')).toBe('Es vocal');
+      293 |     expect(esVocal('i')).toBe('Es vocal');
+      294 |     expect(esVocal('o')).toBe('Es vocal');
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:291:26)
+
+Test Suites: 1 failed, 1 total
+Tests:       34 failed, 1 passed, 35 total
+Snapshots:   0 total
+Time:        3.178 s, estimated 4 s
+Ran all test suites matching /JSI.test.js/i.
+Tienes que instalar git!
+        https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Prep-Course (main)
+$ npm test JSI.test.js                                                       <----- VUELVO A CORRER EL TEST
+
+> prep@1.0.0 test
+> jest --collectCoverage=false --testResultsProcessor ./.reporter/index.js --detectOpenHandles
+
+FAIL 02-JS-I/homework/tests/JSI.test.js
+  nuevaString
+    √ Deberia ser un string (5 ms)
+  nuevoNum
+    √ Deberia ser un numero (1 ms)
+  nuevoBool
+    √ Deberia ser un booleano (6 ms)
+  nuevaResta
+    √ Deberia ser un booleano (1 ms)
+  nuevaMultiplicacion
+    √ Deberia ser un booleano (1 ms)                         <----- VARIAS TILDES DE OK INDICA QUE PASARON MAS EJERCICIOS
+  nuevoModulo
+    × Deberia ser un booleano (3 ms)
+  devolverString(str)
+    √ Deberia devolver el string provisto (1 ms)
+  suma(x, y)
+    √ Deberia devolver la suma de los dos argumentos (1 ms)
+  resta(x, y)
+    √ Deberia devolver la diferencia de los dos argumentos (1 ms)
+  divide(x, y)
+    √ Deberia devolver la division de los dos argumentos (1 ms)
+  multiplica(x, y)
+    √ Deberia devolver el producto de los dos argumentos (1 ms)
+  sonIguales(x, y)
+    × Deberia devolver true si los argumentos son iguales y sino false (1 ms)
+  tienenMismaLongitud(str1, str2)
+    × Deberia devolver true si los strings tienen la misma longitud y sino false (2 ms)
+  menosQueNoventa(num)
+    × Deberia devolver true si el numero es menor a noventa sino false (1 ms)
+  mayorQueCincuenta(num)
+    × Deberia devolver true si el numero es mayor a cincuenta sino false (1 ms)
+  obtenerResto(x, y)
+    × Deberia devolver el resto de dividir x sobre y (1 ms)
+  esPar(num)
+    × Deberia devolver true si el numero es par sino false (1 ms)
+  esImpar(num)
+    × Deberia devolver true si el numero es impar sino false (1 ms)
+  elevarAlCuadrado(num)
+    × Deberia devolver el numero elevado al cuadrado (1 ms)
+  elevarAlCubo(num)
+    × Deberia devolver el numero elevado al cubo (2 ms)
+  elevar(num, exponent)
+    × Deberia devolver el numero elevado al exponente indicado (1 ms)
+  redondearNumero(num)
+    × Deberia devolver el numero redondeado (6 ms)
+  redondearHaciaArriba(num)
+    × Deberia devolver el numero redondeado para arriba (2 ms)
+  numeroRandom()
+    × Debería devolver un número entre 0 y 1 (3 ms)
+  esPositivo(numero)
+    × Debería devolver el string Es positivo ó Es negativo según corresponda (2 ms)
+  agregarSimboloExclamacion(str)
+    × Deberia agregar un signo de exclamacion al final del string (1 ms)
+  combinarNombres(firstName, lastName)
+    × Deberia devolver los strings combinados con un espacio en el medio (1 ms)
+  obtenerSaludo(name)
+    × Deberia devolver el string 'Hola {name}!' (1 ms)
+  obtenerAreaRectangulo(alto, ancho)
+    × Deberia retornar el area correcta del rectangulo (1 ms)
+  retornarPerimetro(lado)
+    × Deberia retornar el perímetro correcto del cuadrado (1 ms)
+  areaDelTriangulo( base, altura)
+    × Deberia retornar el area correcta del triángulo (1 ms)
+  deEuroAdolar(euro)
+    × Deberia retornar el valor correcto de euro a dolar (1 ms)
+  esVocal(letra)
+    × Deberia devolver el string "Dato incorrecto", si el valor ingresado tiene más de una letra (1 ms)
+    × Deberia devolver el string "Dato incorrecto", si el valor ingresado no es vocal (1 ms)
+    × Deberia devolver el string "Es vocal", si el valor ingresado lo es (1 ms)
+
+  ● nuevoModulo › Deberia ser un booleano
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      68 | describe('nuevoModulo', function() {
+      69 |   it('Deberia ser un booleano', function() {
+    > 70 |     expect(nuevoModulo).toBe(true);
+         |                         ^
+      71 |   });
+      72 | });
+      73 |
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:70:25)
+
+  ● sonIguales(x, y) › Deberia devolver true si los argumentos son iguales y sino false
+
+    ReferenceError: bul is not defined
+
+      61 |   // De lo contrario, devuelve "false"
+      62 |   // Tu código:
+    > 63 |     if (x==y , bul== true,bul==false)
+         |                ^
+      64 |   return bul
+      65 | }
+      66 |
+
+      at sonIguales (02-JS-I/homework/homework.js:63:16)
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:116:12)
+
+  ● tienenMismaLongitud(str1, str2) › Deberia devolver true si los strings tienen la misma longitud y sino false
+
+    ReferenceError: len is not defined
+
+      69 |   // De lo contrario, devuelve "false"
+      70 |   // Tu código:
+    > 71 |   if (len(str1)==len(str2) , bul== true,bul==false)
+         |   ^
+      72 |   return bul
+      73 | }
+      74 |
+
+      at tienenMismaLongitud (02-JS-I/homework/homework.js:71:3)
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:124:12)
+
+  ● menosQueNoventa(num) › Deberia devolver true si el numero es menor a noventa sino false
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: undefined
+
+      129 | describe('menosQueNoventa(num)', function() {
+      130 |   it('Deberia devolver true si el numero es menor a noventa sino false', function() {
+    > 131 |     expect(menosQueNoventa(15)).toBe(true);
+          |                                 ^
+      132 |     expect(menosQueNoventa(90)).toBe(false);
+      133 |     expect(menosQueNoventa(100)).toBe(false);
+      134 |   });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:131:33)
+
+  ● mayorQueCincuenta(num) › Deberia devolver true si el numero es mayor a cincuenta sino false
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: undefined
+
+      137 | describe('mayorQueCincuenta(num)', function() {
+      138 |   it('Deberia devolver true si el numero es mayor a cincuenta sino false', function() {
+    > 139 |     expect(mayorQueCincuenta(15)).toBe(false);
+          |                                   ^
+      140 |     expect(mayorQueCincuenta(50)).toBe(false);
+      141 |     expect(mayorQueCincuenta(60)).toBe(true);
+      142 |   });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:139:35)
+
+  ● obtenerResto(x, y) › Deberia devolver el resto de dividir x sobre y
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: undefined
+
+      145 | describe('obtenerResto(x, y)', function() {
+      146 |   it('Deberia devolver el resto de dividir x sobre y', function() {
+    > 147 |     expect(obtenerResto(15, 5)).toBe(0);
+          |                                 ^
+      148 |     expect(obtenerResto(21, 5)).toBe(1);
+      149 |     expect(obtenerResto(22, 5)).toBe(2);
+      150 |   });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:147:33)
+
+  ● esPar(num) › Deberia devolver true si el numero es par sino false
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: undefined
+
+      153 | describe('esPar(num)', function() {
+      154 |   it('Deberia devolver true si el numero es par sino false', function() {
+    > 155 |     expect(esPar(6)).toBe(true);
+          |                      ^
+      156 |     expect(esPar(7)).toBe(false);
+      157 |     expect(esPar(0)).toBe(true);
+      158 |   });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:155:22)
+
+  ● esImpar(num) › Deberia devolver true si el numero es impar sino false
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: undefined
+
+      161 | describe('esImpar(num)', function() {
+      162 |   it('Deberia devolver true si el numero es impar sino false', function() {
+    > 163 |     expect(esImpar(6)).toBe(false);
+          |                        ^
+      164 |     expect(esImpar(7)).toBe(true);
+      165 |     expect(esImpar(0)).toBe(false);
+      166 |   });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:163:24)
+
+  ● elevarAlCuadrado(num) › Deberia devolver el numero elevado al cuadrado
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 36
+    Received: undefined
+
+      169 | describe('elevarAlCuadrado(num)', function() {
+      170 |   it('Deberia devolver el numero elevado al cuadrado', function() {
+    > 171 |     expect(elevarAlCuadrado(6)).toBe(36);
+          |                                 ^
+      172 |     expect(elevarAlCuadrado(7)).toBe(49);
+      173 |     expect(elevarAlCuadrado(0)).toBe(0);
+      174 |     expect(elevarAlCuadrado(-5)).toBe(25);
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:171:33)
+
+  ● elevarAlCubo(num) › Deberia devolver el numero elevado al cubo
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 27
+    Received: undefined
+
+      178 | describe('elevarAlCubo(num)', function() {
+      179 |   it('Deberia devolver el numero elevado al cubo', function() {
+    > 180 |     expect(elevarAlCubo(3)).toBe(27);
+          |                             ^
+      181 |     expect(elevarAlCubo(0)).toBe(0);
+      182 |     expect(elevarAlCubo(-5)).toBe(-125);
+      183 |   });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:180:29)
+
+  ● elevar(num, exponent) › Deberia devolver el numero elevado al exponente indicado
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 4
+    Received: undefined
+
+      186 | describe('elevar(num, exponent)', function() {
+      187 |   it('Deberia devolver el numero elevado al exponente indicado', function() {
+    > 188 |     expect(elevar(2, 2)).toBe(4);
+          |                          ^
+      189 |     expect(elevar(2, 3)).toBe(8);
+      190 |     expect(elevar(0, 5)).toBe(0);
+      191 |     expect(elevar(10, 1)).toBe(10);
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:188:26)
+
+  ● redondearNumero(num) › Deberia devolver el numero redondeado
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: undefined
+
+      195 | describe('redondearNumero(num)', function() {
+      196 |   it('Deberia devolver el numero redondeado', function() {
+    > 197 |     expect(redondearNumero(1.5)).toBe(2);
+          |                                  ^
+      198 |     expect(redondearNumero(2)).toBe(2);
+      199 |     expect(redondearNumero(0.1)).toBe(0);
+      200 |   });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:197:34)
+
+  ● redondearHaciaArriba(num) › Deberia devolver el numero redondeado para arriba
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: undefined
+
+      203 | describe('redondearHaciaArriba(num)', function() {
+      204 |   it('Deberia devolver el numero redondeado para arriba', function() {
+    > 205 |     expect(redondearHaciaArriba(1.5)).toBe(2);
+          |                                       ^
+      206 |     expect(redondearHaciaArriba(2)).toBe(2);
+      207 |     expect(redondearHaciaArriba(0.1)).toBe(1);
+      208 |   });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:205:39)
+
+  ● numeroRandom() › Debería devolver un número entre 0 y 1
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "number"
+    Received: "undefined"
+
+      211 | describe('numeroRandom()', function() {
+      212 |   it('Debería devolver un número entre 0 y 1', function() {
+    > 213 |     expect(typeof numeroRandom()).toBe('number');
+          |                                   ^
+      214 |     expect(numeroRandom()).toBeGreaterThanOrEqual(0);
+      215 |     expect(numeroRandom()).toBeLessThan(1);
+      216 |   });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:213:35)
+
+  ● esPositivo(numero) › Debería devolver el string Es positivo ó Es negativo según corresponda
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: undefined
+
+      219 | describe('esPositivo(numero)', function() {
+      220 |   it('Debería devolver el string \Es positivo ó Es negativo\ según corresponda', function() {
+    > 221 |     expect(esPositivo(0)).toBe(false);
+          |                           ^
+      222 |     expect(esPositivo(23)).toBe('Es positivo');
+      223 |     expect(esPositivo(-2)).toBe('Es negativo');
+      224 |   });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:221:27)
+
+  ● agregarSimboloExclamacion(str) › Deberia agregar un signo de exclamacion al final del string
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "hello world!"
+    Received: undefined
+
+      227 | describe('agregarSimboloExclamacion(str)', function() {
+      228 |   it('Deberia agregar un signo de exclamacion al final del string', function() {
+    > 229 |     expect(agregarSimboloExclamacion('hello world')).toBe('hello world!');
+          |                                                      ^
+      230 |     expect(agregarSimboloExclamacion('Soy Henry')).toBe('Soy Henry!');
+      231 |   });
+      232 | });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:229:54)
+
+  ● combinarNombres(firstName, lastName) › Deberia devolver los strings combinados con un espacio en el medio
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "hello world"
+    Received: undefined
+
+      234 | describe('combinarNombres(firstName, lastName)', function() {
+      235 |   it('Deberia devolver los strings combinados con un espacio en el medio', function() {
+    > 236 |     expect(combinarNombres('hello', 'world')).toBe('hello world');
+          |                                               ^
+      237 |     expect(combinarNombres('Soy', 'Henry')).toBe('Soy Henry');
+      238 |   });
+      239 | });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:236:47)
+
+  ● obtenerSaludo(name) › Deberia devolver el string 'Hola {name}!'
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "Hola Martin!"
+    Received: undefined
+
+      241 | describe('obtenerSaludo(name)', function() {
+      242 |   it('Deberia devolver el string \'Hola {name}!\'', function() {
+    > 243 |     expect(obtenerSaludo('Martin')).toBe('Hola Martin!');
+          |                                     ^
+      244 |     expect(obtenerSaludo('Antonio')).toBe('Hola Antonio!');
+      245 |   });
+      246 | });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:243:37)
+
+  ● obtenerAreaRectangulo(alto, ancho) › Deberia retornar el area correcta del rectangulo
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 4
+    Received: undefined
+
+      248 | describe('obtenerAreaRectangulo(alto, ancho)', function() {
+      249 |   it('Deberia retornar el area correcta del rectangulo', function() {
+    > 250 |     expect(obtenerAreaRectangulo(2, 2)).toBe(4);
+          |                                         ^
+      251 |     expect(obtenerAreaRectangulo(3, 6)).toBe(18);
+      252 |     expect(obtenerAreaRectangulo(0, 2)).toBe(0);
+      253 |   });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:250:41)
+
+  ● retornarPerimetro(lado) › Deberia retornar el perímetro correcto del cuadrado
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 8
+    Received: undefined
+
+      256 | describe('retornarPerimetro(lado)', function() {
+      257 |   it('Deberia retornar el perímetro correcto del cuadrado', function() {
+    > 258 |     expect(retornarPerimetro(2)).toBe(8);
+          |                                  ^
+      259 |     expect(retornarPerimetro(8)).toBe(32);
+      260 |     expect(retornarPerimetro(0)).toBe(0);
+      261 |   });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:258:34)
+
+  ● areaDelTriangulo( base, altura) › Deberia retornar el area correcta del triángulo
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 25
+    Received: undefined
+
+      265 | describe('areaDelTriangulo( base, altura)', function() {
+      266 |   it('Deberia retornar el area correcta del triángulo', function() {
+    > 267 |     expect(areaDelTriangulo(10, 5)).toBe(25);
+          |                                     ^
+      268 |     expect(areaDelTriangulo(20, 10)).toBe(100);
+      269 |     expect(areaDelTriangulo(0, 10)).toBe(0);
+      270 |   });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:267:37)
+
+  ● deEuroAdolar(euro) › Deberia retornar el valor correcto de euro a dolar
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 120
+    Received: undefined
+
+      273 | describe('deEuroAdolar(euro)', function() {
+      274 |   it('Deberia retornar el valor correcto de euro a dolar', function() {
+    > 275 |     expect(deEuroAdolar(100)).toBe(120);
+          |                               ^
+      276 |     expect(deEuroAdolar(200)).toBe(240);
+      277 |     expect(deEuroAdolar(50)).toBe(60);
+      278 |   });
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:275:31)
+
+  ● esVocal(letra) › Deberia devolver el string "Dato incorrecto", si el valor ingresado tiene más de una letra
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "Dato incorrecto"
+    Received: undefined
+
+      281 | describe('esVocal(letra)', function() {
+      282 |   it('Deberia devolver el string "Dato incorrecto", si el valor ingresado tiene más de una letra', function() {
+    > 283 |     expect(esVocal("la")).toBe("Dato incorrecto");
+          |                           ^
+      284 |     expect(esVocal("pero")).toBe("Dato incorrecto");
+      285 |   });
+      286 |   it('Deberia devolver el string "Dato incorrecto", si el valor ingresado no es vocal', function() {
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:283:27)
+
+  ● esVocal(letra) › Deberia devolver el string "Dato incorrecto", si el valor ingresado no es vocal
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "Dato incorrecto"
+    Received: undefined
+
+      285 |   });
+      286 |   it('Deberia devolver el string "Dato incorrecto", si el valor ingresado no es vocal', function() {
+    > 287 |     expect(esVocal("l")).toBe("Dato incorrecto");
+          |                          ^
+      288 |     expect(esVocal("p")).toBe("Dato incorrecto");
+      289 |   });
+      290 |   it('Deberia devolver el string "Es vocal", si el valor ingresado lo es', function() {
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:287:26)
+
+  ● esVocal(letra) › Deberia devolver el string "Es vocal", si el valor ingresado lo es
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "Es vocal"
+    Received: undefined
+
+      289 |   });
+      290 |   it('Deberia devolver el string "Es vocal", si el valor ingresado lo es', function() {
+    > 291 |     expect(esVocal('a')).toBe('Es vocal');
+          |                          ^
+      292 |     expect(esVocal('e')).toBe('Es vocal');
+      293 |     expect(esVocal('i')).toBe('Es vocal');
+      294 |     expect(esVocal('o')).toBe('Es vocal');
+
+      at Object.<anonymous> (02-JS-I/homework/tests/JSI.test.js:291:26)
+
+Test Suites: 1 failed, 1 total
+Tests:       25 failed, 10 passed, 35 total
+Snapshots:   0 total
+Time:        4.422 s
+Ran all test suites matching /JSI.test.js/i.
+Tienes que instalar git!
+        https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git
+
+................................................................................................................
+
+
+++++++++++++++++++++++++++++++++++++++++++++++                       ++++++  PRESENTAR ARCHIVOS A GUARDAR LOCALMENTE (AGREGAR)
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Prep-Course (main)
+
+
+$ git add .            <----- GIT ADD . CON PUNTO AGREGA TODOS LOS ARCHIVOS QUE QUIERO GUARDAR LOCALMENTE CON COMMIT
+
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Prep-Course (main)
+$ git status                                                                     <----- GIT STATUS
+
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   02-JS-I/homework/homework.js
+        new file:   Desktop.ini
+
+++++++++++++++++++++++++++++++++++++++++++++++                       ++++++  GUARDAR VERSION LOCALMENTE (COMISIONAR)
+
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Prep-Course (main) 
+
+$ git commit -m 'Homework JSI partially done but I am very happy!! RE'   <----- GIT COMMIT -M 'DESCRIPCION OBLIGATORIA'
+
+
+
+[main 447e49d] Homework JSI partially done but I am very happy!! RE
+
+ 2 files changed, 17 insertions(+), 12 deletions(-)    <----- ACA GUARDO MIS MODIFICACIONES LOCALES COMO UNA NUEVA VERSION LOCAL
+ create mode 100644 Desktop.ini
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Prep-Course (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+
+++++++++++++++++++++++++++++++++++++++++++++++                       ++++++  GUARDAR VERSION EN SERVIDOR REMOTO (EMPUJAR)
+
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Prep-Course (main)
+$ git push origin master               <----- ACA SUBIRIA MIS MODIFICACIONES LOCALES A MI CUENTA GITHUB
+
+
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/RodrigoEche/Prep-Course.git'
+
+              <----- CREO QUE NO ANDUVO XQ LUEGO DE CLONAR EL REPOSITORIO EN GITHUB A MI ESCRITORIO
+              <----- LO CAMBIE DE LUGAR A MIS DOCUMENTOS/SOY HENRY Y ESO ROMPIO LA REFERENCIA GUARDADA 
+              <----- O BIEN ES UN PROBLEMA DE INGRESO A GITHUB
+
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Prep-Course (main)
+$ Git push https://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@github.com/RodrigoEche/Prep-Course
+
+
+              <----- ACA SI ME ANDUVO PERO PONIENDO UN TOKEN CREADO EN GITHUB
+              <----- SEGUN EL FORMATO: Git push https://MITOKEN@github.com/RodrigoEche/Prep-Course 
+              <----- ES COMO UN PASE ABSOLUTO EN LUGAR DE REFERENCIAS RELATIVAS(?) TIPO origin master
+
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 851 bytes | 851.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.  <----- SUBIDA A GITHUB EXITOSA!!!! 
+
+To https://github.com/RodrigoEche/Prep-Course
+   9fa04e6..447e49d  main -> main
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Prep-Course (main)
+$
