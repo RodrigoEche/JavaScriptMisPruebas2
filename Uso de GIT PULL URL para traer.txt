@@ -1,0 +1,21 @@
+En GitHub me sugirió poner un archivo Readme.md explicativo del repositorio
+Lo hice, lo guarde y desde consola le hice un > git pull url
+donde la url la saque de la ventanita emergente en GitHub
+
+rodrigo@Laptop-IdeaPad MINGW64 ~/Documents/SoyHenry/Mis pruebas (main)
+$ git pull https://github.com/RodrigoEche/MisPruebas2.git
+
+
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 836 bytes | 3.00 KiB/s, done.
+From https://github.com/RodrigoEche/MisPruebas2
+ * branch            HEAD       -> FETCH_HEAD
+Updating 674b995..f1eda66
+Fast-forward
+ README.md | 5 +++++
+ 1 file changed, 5 insertions(+)
+ create mode 100644 README.md
+
