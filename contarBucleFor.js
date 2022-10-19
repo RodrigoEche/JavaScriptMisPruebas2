@@ -52,13 +52,15 @@ function contar(n) {
 //+++++++++++++++++++++++++++++++++++
 // contar y mostrar pares hasta un valor dado al llamar la funcion
 
-function contar(n) {    	
-	for(var i = 1; i <= n; i++) {			// contador vivo
-							// no hace falta return
-		if (  (i % 2)===0 ) {console.log(i);};		
-	};   
+function contar(n) {   
+	// busca nros pares 	
+	for(var i = 0; i <= n; i++) if (  (i % 2)===0 ) {console.log(i);};		
+	// busca nros impares 	
+	for(var i = 0; i <= n; i++) if (  (i % 2)===0 ) {console.log(i+1);};		
+	
 }
 //+++++++++++++++++++++++++++++++++++
 
-contar(280);
+contar(20);
+
 

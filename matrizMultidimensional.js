@@ -43,7 +43,8 @@ tipo =
 				case 3: relleno = j;	 break;   		 
 				case 4: relleno = i + j; break;	   		 
 				case 5: relleno = i * j; break;
-				case 6: relleno = azar; break;														case 7: relleno = i **2; break;					
+				case 6: relleno = azar; break;														
+				case 7: relleno = i **2; break;					
 				case 8: relleno = i **j; break;
 				case 9: relleno = i **j**j; break;
 				case 10: relleno = i + ',' + j; break;
