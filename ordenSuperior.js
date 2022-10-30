@@ -61,5 +61,5 @@ autos.forEach( (elemento,indice) => { sotua.unshift(elemento) });
 console.log("Autos ");
 autos.forEach( function (elemento,indice) {  console.log(indice + ': '+ elemento);   } );
 
-console.log("Autos ---> Sotua");
+console.log("Autos ---> Sotua ");
 sotua.forEach( function (elemento,indice) {  console.log(indice + ': '+ elemento);   } );
