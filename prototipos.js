@@ -1,10 +1,10 @@
 //..................................................................................  
-
+// el uso de Prototipado es lo que prefiere Toni
 function Persona2(nombre, apellido) {
-    this.nombre = nombre || 'poner nombre';      //OJO NO OLVIDAR ESTE THIS
+    this.nombre = nombre || 'poner nombre';   
     this.apellido= apellido || 'poner apellido';
 }
-
+//ésto es el prototipado de los métodos que tendrán los objetos instanciados
 Persona2.prototype.getNombre = function() {  return this.nombre; };
 Persona2.prototype.getApellido = function() {return this.apellido; };
 Persona2.prototype.mostrar = function() {console.log( this.nombre + ' ' + this.apellido) }; 
