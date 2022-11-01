@@ -5,7 +5,6 @@
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 
 const numeros = [ 15, 16, 17, 18, 19 ]; // suma = 85
-const palabras =[ "Hola", "mi", "nombre", "es", "Martín" ];
 
 // FUNCIONES CALLBACK CON VALOR INICIAL PARA EL ACUMULADOR
 console.log("USANDO CALLBACK FUNCTIONS DENTRO DEL reduce(): índices, valor actual y valor acumulado con VALOR INICIAL")
@@ -50,18 +49,25 @@ numeros.reduce( function (acumulado,actual,indice)  {
 const numeros2 = [ 15, 16, 17, 18, 19 ]; // suma = 85   producto = 1 395 360
 function multiplicarArreglo ( a, b ) { return a * b;}
 producto = numeros2.reduce(multiplicarArreglo);
-console.log("El resultado de MULTIPLICAR los nros dentro de: [" + numeros2 + "] dá " + producto);
+console.log("El resultado de MULTIPLICAR los elementos dentro de: [" + numeros2 + "] dá " + producto);
 console.log("Verificación: " + (15*16*17*18*19)) // correcto dá producto = 1 395 360
 
 const numeros3 = [ 100, 2, 5, 0.5, 4 ]; // suma =    producto = cociente
 function dividirArreglo ( a, b ) { if ( b === 0)  return a; else return a / b;}
 cociente = numeros3.reduce(dividirArreglo); // denominador 0 no divide devuelve sin dividir
-console.log("El resultado de DIVIDIR los nros (excepto si es 0) dentro de: [" + numeros3 + "] dá " + cociente);
+console.log("El resultado de DIVIDIR los elementos (excepto si es 0) dentro de: [" + numeros3 + "] dá " + cociente);
 console.log("Verificación: " + (100/2/5/0.5/4)) // correcto dá cociente = 5
 
 // Ejemplo de multiplicar dos numeros con CallBack Function
 const numeros4 = [ 15, 16, 17, 18, 19 ]; // suma = 85   producto = 1 395 360
 function sumarArreglo ( a, b ) { return a + b;}
 suma = numeros2.reduce(sumarArreglo);
-console.log("El resultado de SUMA los nros dentro de: [" + numeros4 + "] dá " + suma);
+console.log("El resultado de SUMA los elementos dentro de: [" + numeros4 + "] dá " + suma);
 console.log("Verificación: " + (15 + 16 + 17 + 18 + 19)) // correcto dá suma = 85
+
+// Y FINALMENTE PONER TODAS LAS PALABRAS JUNTAS EN UNA FRASE CON PROLOGO "La frase es: "
+const palabras =[ "Hola", "mi", "nombre", "es", "Martín" ];
+function concatenarArreglo ( a , b ) {return a + " " + b;};
+
+frase = palabras.reduce(concatenarArreglo);
+console.log("El resultado de concatenar los elementos dentro de: [" + palabras + "] dá " + frase);
