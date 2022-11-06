@@ -23,7 +23,7 @@ console.log( autos );
 console.log("USANDO CALLBACK FUNCTIONS DENTRO DEL forEach(): solo valores del array")
 function mostrarListaFormato1(elemento,indice) {  console.log(elemento);   }
 autos.forEach(mostrarListaFormato1); 
-//OJO: la función CB dentro del .forEach debe diseñarse según que permite el forEach 
+//OJO: la función CB dentro del .forEach debe diseñarse según lo que permite el forEach 
 // consultar el help para ese método de orden superior.
 
 console.log("USANDO CALLBACK FUNCTIONS DENTRO DEL forEach(): índices y valores del array")
