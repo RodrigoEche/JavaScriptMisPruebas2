@@ -2,7 +2,8 @@ clear
 git status
 git add .
 git status
-git commit -m "mensaje "$date
+today = `date +%m-%d-%Y`
+git commit -m today
 git status
 git push
 git log
