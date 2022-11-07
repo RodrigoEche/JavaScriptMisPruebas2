@@ -5,4 +5,4 @@ git status
 git commit
 git status
 git push
-git show
+git log
