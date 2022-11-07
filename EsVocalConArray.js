@@ -14,17 +14,19 @@ function esVocal(letra){
     if (long>1) {}  
     else {
             for (var i = 0; i < 5 ; i++) { 
-                console.log( i + ' ' +  vocales[i] );
+                console.log( i + ' ' +  vocales[i] ); //muestra codigo asignado a cada vocal 
               if (letra == vocales[i]){msg= "Es vocal";}              
             }
     }
-    console.log('Dato ingresado: ' + letra + ' ' + msg);
+    console.log('Dato ingresado: ' + letra + ' ----> ' + msg);
     return msg;
   }
 //..............................................................
 letra='b';
-esVocal(letra);
+esVocal(letra);  // llamada a la funcion
 
+letra='a';
+esVocal(letra); 
 //..............................................................
 
 
