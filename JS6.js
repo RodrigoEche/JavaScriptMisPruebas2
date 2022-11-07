@@ -37,5 +37,7 @@ function filtrar(funcion) {
     var productos = [ {price: 100, name: 'tv' } , { price: 50,  name: 'phone' } , { price: 30, name: 'lamp' }]
     console.log("productos: ")
     console.log(productos)
-
+    
+    
     productos.filtrar(function(p) { return p.price >= 50; }  )
+    
