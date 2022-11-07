@@ -2,8 +2,8 @@ clear
 git status
 git add .
 git status
-today = `date +%m-%d-%Y`
-git commit -m {$today}
+
+git commit -m {`date +%m-%d-%Y`}
 git status
 git push
 git log
