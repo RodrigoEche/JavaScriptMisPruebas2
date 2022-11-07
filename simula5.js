@@ -15,7 +15,7 @@ function pluck(array, propiedad) {
     //solución clásica con bucles for() ....  hacer
     
     //return array[0][propiedad];  --> porque si vale?
-    //return array[0].propiedad;   --> porque no vale?
+    //return array[0].propiedad;   --> porque no vale?   ////
 
     //solución con funcion superior: array.map()
     nuevoArray = array.map(elemento => { return elemento[propiedad];})
