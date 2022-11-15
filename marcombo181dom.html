@@ -1,0 +1,63 @@
+<html>
+
+<head>
+	<title> Prueba 1  </>  </title>
+
+</head>
+
+<body>
+	
+	<div class="divClass">
+        <h1> Prueba de DOM libro Marcombo pag 181</h1>   
+		<h2> Editado con Notepad++ 13/11/2022 </>		
+    </div>
+
+	<div>
+		<p id ="salida"/>
+	</div>
+	
+	<script type = "text/javascript">	
+		const mensaje = "Hola mundo!";
+		document.getElementById('salida').innerHTML = mensaje;			
+	</script>
+	<div style="border: 8px dotted blue;">
+		<h4>Ejemplo de div y span ( Fuente: https://developer.mozilla.org/es/docs/Web/HTML/Element/span )</h4>
+		<p>
+			Todo esto es un párrafo dentro de un div (en Azul),
+			<span style="color: red;" dir="rtl"> y esto un span dentro de un párrafo (en Rojo). </span>
+		</p>
+	</div>
+	
+	<ol>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+		<li>9</li>
+		<li>10</li>
+				
+	</ol>
+	
+	<form id='MiFormulario'> 
+		<button type="button" onclick='traduce(nrosEspanol)'>Espanol</button>
+		<button type="button" onclick='traduce(nrosIngles)'>Ingles</button>
+		<button type="button" onclick='traduce(nrosItaliano)'>Italiano</button>		
+	</form>
+	
+	<script type = "text/javascript">
+		const nrosEspanol 	= ['uno','dos','tres','cuatro','cinco','seis','siete','ocho','nueve','diez'];
+		const nrosIngles 	= ['one','two','three','four','five','six','seven','eight','nine','ten']; 
+		const nrosItaliano 	= ['uno','due','tre','quattro','cinque','sei','sette','otto','nove','dieci'];
+		
+		function traduce(idioma) {
+			let elementosLI = document.getElementsByTagName("li");
+			for (let i=0; i < elementosLI.length; i++) {elementosLI[i].innerHTML = idioma[i]};		
+		}
+	</script>
+</body>
+
+</html>
