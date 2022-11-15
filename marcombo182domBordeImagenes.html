@@ -1,0 +1,69 @@
+<html>
+
+<head>
+	<title> Prueba 1  </>  </title>
+
+</head>
+
+<body>	
+	<div class="divClass">
+        <h1> Prueba de DOM libro Marcombo pag 182</h1>   
+		<h2> Editado con Notepad++ 15/11/2022 </>		
+    </div>
+
+	
+	
+
+	<div style="border: 2px dotted cyan;">
+		<h4>Ejemplo de div y span ( Fuente: https://developer.mozilla.org/es/docs/Web/HTML/Element/span )</h4>
+		<p>
+			Todo esto es un párrafo < p > dentro de un < div > (en Azul),
+			<span style="color: red;" dir="ltr";> y esto un < span > dentro de un párrafo (en Rojo). </span>
+		</p> 
+	</div>
+	
+	<div>
+		<p>           y esta carita es una imagen  < img src="Carita2.png" />                             </p>
+	</div>
+		
+		<img src="Carita0.png" />
+		<!-- <img src="Carita1.png" />
+		<img src="Carita2.png" />
+		<img src="Carita3.png" />
+		<img src="Carita4.png" />
+		<img src="Carita5.png" />
+		<img src="Carita6.png" />
+		<img src="Carita7.png" /> -->	
+	
+	<form id='MiFormulario'> 
+		<button type="button" onclick='poneSacaBordesImagenes()' id="idBoton">Pone Borde</button>			
+	</form>
+	
+	<div style="border: 2px solid green;">
+		<p> en cambio los botones se ponen dentro de un form y su sintaxis es rara...                                        </p>
+		<p> < form >  < button type="button" onclick='poneSacaBordesImagenes()' id="idBoton">Pone Borde< /button> < /form>   </p>
+		<p> al hacer click en el botón llama a la función que atiende el evento onclick y dentro de la función vá el codigo JavaScript     <p>
+	</div>
+	
+	<script type = "text/javascript">
+		let hayBorde = false;	
+		
+		function poneSacaBordesImagenes() {
+			//selecciona el botón para conmutarle su texto y la coleccion de imagenes del formulario
+			let imagenes = document.images;
+			let boton = document.getElementById('idBoton');
+			
+			if (!hayBorde) {
+				for (let i=0; i < imagenes.length; i++) {imagenes[i].style.border = 'solid';}
+				boton.innerHTML = 'Pone borde';
+				hayBorde = true;
+			} else {
+			for (let i=0; i < imagenes.length; i++) {imagenes[i].style.border = 'none';}
+				boton.innerHTML = 'Saca borde';
+				hayBorde = false;
+			}
+		}	
+	</script>
+</body>
+
+</html>
