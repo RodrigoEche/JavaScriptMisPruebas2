@@ -13,7 +13,7 @@ function filtrar(funcion) {
     //   name: 'phone'
     // }, {
     //   price: 30,
-    //   name: 'lamp'
+    //   name: 'lamp'  /////.........................
     // }]
     // productos.filtrar(function(p) {
     //   return p.price >= 50;
@@ -23,5 +23,5 @@ function filtrar(funcion) {
   }
   };
 
-  personas.filtrar(p => p.edad <= 22)
+  personas.filtrar(p => p.edad <= 23)
   
