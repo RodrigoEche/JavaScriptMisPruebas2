@@ -27,13 +27,15 @@
 	</div>
 		
 		<img src="Carita0.png" />
-		<!-- <img src="Carita1.png" />
+		<img src="Carita1.png" />
 		<img src="Carita2.png" />
+		<!-- 
 		<img src="Carita3.png" />
 		<img src="Carita4.png" />
 		<img src="Carita5.png" />
 		<img src="Carita6.png" />
-		<img src="Carita7.png" /> -->	
+		<img src="Carita7.png" /> 
+		-->	
 	
 	<form id='MiFormulario'> 
 		<button type="button" onclick='poneSacaBordesImagenes()' id="idBoton">Pone Borde</button>			
@@ -55,11 +57,11 @@
 			
 			if (!hayBorde) {
 				for (let i=0; i < imagenes.length; i++) {imagenes[i].style.border = 'solid';}
-				boton.innerHTML = 'Pone borde';
+				boton.innerHTML = 'Saca borde';
 				hayBorde = true;
 			} else {
 			for (let i=0; i < imagenes.length; i++) {imagenes[i].style.border = 'none';}
-				boton.innerHTML = 'Saca borde';
+				boton.innerHTML = 'Pone borde';
 				hayBorde = false;
 			}
 		}	

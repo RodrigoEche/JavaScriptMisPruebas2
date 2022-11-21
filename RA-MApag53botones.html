@@ -1,0 +1,111 @@
+<html>
+<head>
+	<title> Modelado de Objetos del Documento  </>  </title>
+</head>
+<body>	
+	<div class="divClass">
+        <h1> DOM (Modelado de Objetos del Documento) 	</h1>  
+		<h2> Fuente: Marcombo 182 y RA-MA 53 			</h2>
+		<h3> Editado con Notepad++ 21/11/2022 Rodrigo	</h3>		
+    </div>
+
+	<div style="border: 2px dotted cyan;">
+		<h4>Ejemplo de div y span ( Fuente: https://developer.mozilla.org/es/docs/Web/HTML/Element/span )</h4>
+		<p>	Todo esto es un párrafo < p > dentro de un < div > (en Azul),
+			<span style="color: red;" dir="ltr";> y esto un < span > dentro de un párrafo (en Rojo). </span> </p> </div>
+	
+	<div>	<p> y esta carita es una imagen  < img src="Carita2.png" />  </p>	</div>
+		
+		<img src="Carita0.png" />
+		<img src="Carita1.png" />
+		<img src="Carita2.png" />
+		
+	<!-- comentario -->
+	<form id='MiFormulario'> 
+		<!-- BOTONES -->
+		<button type="button" onclick='poneSacaBordesImagenes()' id="idBoton">Pone Borde</button>	
+		<input type = "submit" value = "Enviar" id = "idBotonEnviar" onclick = 'poneSacaBordesImagenes()'> <!-- no anda el onclick aca -->
+		<input type = "button" value = "Pulsame" id = "idBotonPulsame" onclick = 'poneSacaBordesImagenes()'> <!-- anda barbaro -->
+		<input type = "reset" value = "Reset" id = "idBotonReset" onclick = 'poneSacaBordesImagenes()'>
+		
+		<!-- ENTRADAS: LABEL Y CAJA ENTRADA  -->
+		<label for = "Texto"> Bestia:    </label>
+		<input type = "text" value = "666" id = "idTexto" name = "Texto" onclick = 'poneSacaBordesImagenes()'>
+		
+		<!-- ENTRADAS: LABEL Y CAJA CONTRASEÑA  -->
+		<label for = "Pass"> Clave:    </label>
+		<input type = "password" value = "777" id = "idPassword" name = "Pass" onclick = 'poneSacaBordesImagenes()'>
+		
+		<!-- ENTRADAS: LABEL Y TILDE  -->
+		<label for = "Tilde"> Tildar:    </label>
+		<input type = "checkbox" value = "888" id = "idTilde" name = "Tilde" onclick = 'poneSacaBordesImagenes()'>
+		
+		<!-- ENTRADAS: LABEL Y OPCIONES(RADIO)  -->              <!-- name = "MISMO NOMBRE PARA QUE ACTUEN EN GRUPO"   -->
+		<label for = "Opcion"> Optar:    </label>
+		<input type = "radio" value = "rojo" 	id = "idOpcion1" name = "Opcion" onclick = 'poneSacaBordesImagenes()'>
+		<input type = "radio" value = "verde" 	id = "idOpcion2" name = "Opcion" onclick = 'poneSacaBordesImagenes()'>
+		<input type = "radio" value = "amarillo"id = "idOpcion3" name = "Opcion" onclick = 'poneSacaBordesImagenes()'>
+		
+		<!-- ENTRADAS: COLORES  -->
+		<label for = "Color"> Elegí color:    </label>
+		<input type = "color" value = "" id = "idColor" name = "Color" onclick = 'poneSacaBordesImagenes()'>
+		
+		<!-- ENTRADAS: FECHAS  -->
+		<label for = "Fecha"> Elegí fecha:    </label>
+		<input type = "date" value = "2022-10-25" min = "2022-6-25" max = "2023-1-25" id = "idFecha" name = "Fecha" onclick = 'poneSacaBordesImagenes()'>
+		
+		<!-- ENTRADAS: NÚMEROS  -->
+		<label for = "Numero"> Ingresá el nro (o a 30):    </label>
+		<input type = "number" value = "3" min = "0" max = "30" id = "idNumero" name = "Numero" onclick = 'poneSacaBordesImagenes()'>
+		
+		<!-- ENTRADAS: DESPLEGABLES  -->
+		<label for = "Desplegable"> Elegí el transporte:    </label>
+		<select	name = "Desplegable">
+			<option value = "auto">Auto</option>
+			<option value = "avion">Avion</option>
+			<option value = "tren">Tren</option>
+			<option value = "a pata">A pata</option>			
+		</select>
+		
+		<!-- ENTRADAS: AREAS DE ESCRITURA  -->
+		<label for = "AreaEscritura"> Describí tu reclamo:    </label>
+		<textarea	name = "AreaEscritura" rows = "4" cols = "80">
+		Ingresá acá tu reclammo 
+		(máximo 5 renglones)...
+		Si cinco nomás.
+		es suficiente hacéla corta,
+		que te crees Borges!!!...
+		</textarea>
+	
+
+	</form>
+	
+	
+	<div style="border: 2px solid green;">
+		<p> en cambio los botones se ponen dentro de un form y su sintaxis es rara...                                        </p>
+		<p> < form >  < button type="button" onclick='poneSacaBordesImagenes()' id="idBoton">Pone Borde< /button> < /form>   </p>
+		<p> al hacer click en el botón llama a la función que atiende el evento onclick y dentro de la función vá el codigo JavaScript     <p>
+	</div>
+	
+	<script type = "text/javascript">
+		let hayBorde = false;	
+		
+		function poneSacaBordesImagenes() {
+			//selecciona el botón para conmutarle su texto y la coleccion de imagenes del formulario
+			let imagenes = document.images;
+			let boton = document.getElementById('idBoton');
+			
+			if (!hayBorde) {
+				for (let i=0; i < imagenes.length; i++) {imagenes[i].style.border = 'solid';}
+				boton.innerHTML = 'Saca borde';
+				hayBorde = true;
+			} else {
+			for (let i=0; i < imagenes.length; i++) {imagenes[i].style.border = 'none';}
+				boton.innerHTML = 'Pone borde';
+				hayBorde = false;
+			}
+		}	
+	</script>
+</body>
+
+</html>
