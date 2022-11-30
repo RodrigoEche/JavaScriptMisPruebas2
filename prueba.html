@@ -1,0 +1,70 @@
+<!--  Usar:  </>  <>   </script>   <!-- -->     <!-- -->
+
+<!-- +++++++++++++++++++++++++++ HEAD +++++++++++++++++++++++++++ -->
+<html>
+	<head>
+		<h1>  Título h1 </h1>
+		<h2>  Título h2  </h2>
+		<p> párrafo        ...</p>
+		<title> un title: JS interno y externo </title>
+		<link href="./buho.ico" rel="shortcut icon" />
+		
+	</head>
+
+<!-- +++++++++++++++++++++++++++ CUERPO +++++++++++++++++++++++++++ -->
+	<body>
+	
+	
+	<form name = "FormularioEntradaDatos" >		
+		<div>
+			<!-- ENTRADA DE TEXTO-->
+			Ingrese su nombre (opcional): <input type="text" id="idnombre" name="nombre" required minlength="4" maxlength="20" size="18">
+		</div>		
+		<div>
+			<!-- ENTRADA DE NUMERO-->
+			Ingrese un numero: <input type="number" id="altura" name = "CampoNumero" >
+			y presione el botón: 	<button  type ="button" onclick="funcionLecturaNumero()">OK</button>
+		</div>
+		<div>
+			<!-- MUESTRA DATOS-->
+			<p id="mensaje"> aca hay un mensaje que se escribe dinamicamente </p>	
+		</div>		
+	</form>
+	
+	<!-- 0 script: codigo en propio html -->
+	<script type = "text/javascript">
+		function funcionLecturaNumero() {
+			ingresado = document.getElementById("altura");
+			x=ingresado.value;
+			y = 2 * x;
+			alert("Se ingreso: " + ingresado.value + " de tipo " + typeof x);
+			document.getElementById("mensaje").innerHTML = "--------------- > " + x + " x 2 = " + x * 2;					
+	}
+	</script>
+	
+	
+	<!-- 1er script: codigo en propio html -->
+	<script> 			
+		alert("js interno");
+	</script>
+
+	<!-- 2do script: llama codigo fuera html -->
+	<script src="./prueba.js"> 		
+
+	</script>
+
+	<!-- 3er script: codigo en propio html -->
+	<script> 	
+		alert("666");		
+		var cadena = "";
+	
+		var entrada= document.getElementsByName("nombre");
+		console.log(up_names[0].tagName)
+		
+
+	</script>
+	
+
+	</body>	
+</html>
+<!-- +++++++++++++++++++++++++++ FIN ARCHIVO +++++++++++++++++++++++++++ -->

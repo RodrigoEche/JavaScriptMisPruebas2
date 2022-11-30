@@ -1,0 +1,10 @@
+h1 {color: blueviolet;}
+h2 {color: black;}
+h3 {color: black;}
+h4 {color: black;}
+
+img { width: 400px;}
+
+#divImag {height: 400px; width: 410px; background-color: rgb(240, 180, 12); padding:20px; border: 2px solid red;}
+
+#spanId {font-size: 18px; margin:50px; font-weight: "bold"}

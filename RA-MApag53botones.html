@@ -1,6 +1,7 @@
 <html>
 <head>
 	<title> Modelado de Objetos del Documento  </>  </title>
+	<link href="./amada.ico" rel="shortcut icon" />
 </head>
 <body>	
 	<div class="divClass">
@@ -76,10 +77,38 @@
 		es suficiente hacéla corta,
 		que te crees Borges!!!...
 		</textarea>
-	
-
 	</form>
 	
+	<!-- FROMULARO PARA VALIDACION DE TEXTO INGRESADO -->
+	<form name = "FormularioValidacion" action="/action_page.php" onsubmit="return validarTexto()">
+		Nombre: <input type="text" name = "CampoTexto">
+		Botón: 	<input type ="submit" value="Submit">
+	</form>
+	
+	<script type = "text/javascript">
+	function validarTexto() {
+		var campo = document.forms["FormularioValidacion"]["CampoTexto"].value;
+		if (campo=="") {alert("No dejes vacío este campo"); return false;}
+	}
+	</script>
+	
+		<!-- FROMULARO PARA VALIDACION DE NUMERO INGRESADO -->
+	<form name = "FormularioValidacionNumero" action="/action_page.php" >
+		Numero: <input type="number" id="idNumero" name = "CampoNumero" >
+		Botón: 	<button  type ="button" onclick="funcionValidaNumero()">OK</button>
+		<p id="idMensaje"> aca vendra el mensaje </p>		
+	</form>
+	
+	<script type = "text/javascript">
+	function funcionValidaNumero() {
+		var ingresado = document.getElementById("idNumero");
+		alert("Se ingreso: " + ingresado.value);
+		if (!ingresado.checkValidity()) 
+		{document.getElementById("idMensaje").innerHTML = ingresado.validationMessage;	}
+		else
+		{document.getElementById("idMensaje").innerHTML = "Numero correcto";	}
+	}
+	</script>
 	
 	<div style="border: 2px solid green;">
 		<p> en cambio los botones se ponen dentro de un form y su sintaxis es rara...                                        </p>

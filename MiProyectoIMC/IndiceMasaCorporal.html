@@ -1,0 +1,97 @@
+<!--  Usar:  </>  <>   </script>   <!-- -->     <!-- -->
+
+<!-- +++++++++++++++++++++++++++ HEAD +++++++++++++++++++++++++++ -->
+<html>
+	<head>
+		<title> un title: JS interno y externo </title>
+		<link href="./prueba.css"   rel="stylesheet" />		
+		<link href="./semaforo.ico" rel="shortcut icon" />
+	</head>
+
+<!-- +++++++++++++++++++++++++++ CUERPO +++++++++++++++++++++++++++ -->
+	<body>
+	
+	<div class="divClass">
+		<i><h1>  INDICE DE MASA CORPORAL						</h1></i>
+		<h2>  Calcula el IMC con la altura, peso y sexo  	</h2>
+		<h3>  Autor: Rodrigo Nov 2022        				</h3>		
+	</div>
+	
+	<div class="divClass">
+		<form name = "FormularioEntradaDatos" >		
+		
+			<!-- ENTRADA DE TEXTO-->
+			Ingrese su nombre (opcional): <input type="text" id="nombre" name="nombre" size="20" value="" >
+			<div> <p>  </p>	</div>
+		
+			<!-- ENTRADA DE NUMEROS-->
+			Ingrese su peso    (kg): <input type="number" id="peso" name = "peso" size="10" value="80"  > <div> <p>  </p>	<div>
+			Ingrese su altura  (cm): <input type="number" id="altura" name = "altura" size="10" value="180"> <div> <p>  </p>	<div>
+			
+			Click para calcular IMC: <button  type ="button" onkeydown="CalcularIMC()" onclick="CalcularIMC()"> Calcular IMC </button>	<div> <p>  </p>	<div>		
+				
+			<!-- MUESTRA DATOS-->	
+			<!--   <p id="mensaje"> . </p>		-->	
+			IMC : <input type="text" id="imc" name="imc" size=5" color="red"> <div> <p>  </p>	<div>			
+			     <input type="text" id="mensaje" name="mensaje" size="60" value="" > <div> <p>  </p>	<div>
+			
+		</form>
+	</div>
+	
+	<div id = divImag class="divClass"> 				
+			<img src = "https://www.topdoctors.mx/files/Image/large/a7af528584b6475633cf9caf0b525518.jpeg" alt = "gráfico de IMC"/>
+			<img src = "./imagen-IMC.png" alt = "tabla de IMC"/>
+	</div>
+			<ul><span id="spanId"> Ver tema en  </span>
+			<a href="https://www.topdoctors.mx/diccionario-medico/indice-de-masa-corporal-imc">TopDoctors</a>		</ul>	
+	
+	
+	<!-- 0 script: codigo en propio html -->
+	<script type = "text/javascript">
+		var colorcito = "#5DBB95"; //https://es.stackoverflow.com/questions/438403/cambiar-colores-del-input-con-js
+		var colorcite = "#BBA65D";
+		
+		//manejo de eventos
+		// ver link de abajo...
+		//https://developer.mozilla.org/es/docs/Web/API/HTMLElement/input_event#ejemplos
+		//fin de manejo de eventos 
+		
+		function CalcularIMC() {
+			peso = document.getElementById("peso").value;
+			altura = document.getElementById("altura").value;
+				altura_metros = altura / 100;
+				altura_cuadrado=altura_metros*altura_metros;
+			
+				valorIMC = Math.round(peso *10 / altura_cuadrado)/10;
+				if (valorIMC > 0) {color = "blue"; clasificación = "Bajo peso";}
+				if (valorIMC > 18.5) {color = "green"; clasificación = "Peso promedio";}
+				if (valorIMC > 25) {color = "orange"; clasificación = "Sobrepeso";}
+				if (valorIMC > 30) {color = "red"; clasificación = "Obesidad grado I";}
+				if (valorIMC > 35) {color = "magenta"; clasificación = "Obesidad grado II";}
+				if (valorIMC > 40) {color = "violet"; clasificación = "Obesidad grado III";}
+				clasificación.bold(); //http://www.w3big.com/try/try.php?filename=tryjsref_str_style
+				
+			//document.getElementById("mensaje").style.color = color;		
+			document.getElementById("mensaje").style.backgroundColor = color;		
+	
+			//document.getElementById("mensaje").innerHTML = "Tu peso de " + peso +" kg para tu estatura se clasifica como: " + clasificación;	
+			document.getElementById("mensaje").value= "Tu peso de " + peso +" kg para tu estatura se clasifica como: " + clasificación;
+			
+			//document.getElementById("imc").style.color = color;
+			document.getElementById("imc").style.backgroundColor =color;
+			//document.getElementById("imc").style.font.bold;//.fontsize(6)
+			//document.getElementById("imc").style.font.size=22;
+			
+			document.getElementById("imc").value = valorIMC;
+		}
+	</script>
+	
+	<!-- 1er script: codigo en propio html -->
+	<script> <!-- alert("js interno"); -->	</script>
+
+	<!-- 2do script: llama codigo fuera html -->
+	<script src="./prueba.js"> 			    </script>
+	
+	</body>	
+</html>
+<!-- +++++++++++++++++++++++++++ FIN ARCHIVO +++++++++++++++++++++++++++ -->
