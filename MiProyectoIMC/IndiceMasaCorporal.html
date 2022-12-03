@@ -12,7 +12,7 @@
 	<body>
 	
 	<div class="divClass">
-		<i><h1>  INDICE DE MASA CORPORAL						</h1></i>
+		<i><h1 id=tituloH1 >  INDICE DE MASA CORPORAL						</h1></i>
 		<h2>  Calcula el IMC con la altura, peso y sexo  	</h2>
 		<h3>  Autor: Rodrigo Nov 2022        				</h3>		
 	</div>
@@ -25,15 +25,16 @@
 			<div> <p>  </p>	</div>
 		
 			<!-- ENTRADA DE NUMEROS-->
-			Ingrese su peso    (kg): <input type="number" id="peso" name = "peso" size="10" value="80"  > <div> <p>  </p>	<div>
-			Ingrese su altura  (cm): <input type="number" id="altura" name = "altura" size="10" value="180"> <div> <p>  </p>	<div>
+			Ingrese su peso                   (kg): <input type="number" id="peso" name = "peso" size="8" value="80"  > <div> <p>  </p>	<div>
+			Ingrese su altura(cm): <input type="number" id="altura" name = "altura" size="8" value="180"> <div> <p>  </p>	<div>
 			
-			Click para calcular IMC: <button  type ="button" onkeydown="CalcularIMC()" onclick="CalcularIMC()"> Calcular IMC </button>	<div> <p>  </p>	<div>		
-				
+			Click para calcular IMC: <button  type ="button"  onkeydown="CalcularIMC()" onclick="CalcularIMC()"> Calcular IMC </button>			
+			Click para boludear: <button id="botonColor" type ="button"> Color </button>	<div> <p>  </p>	<div>		
+		
 			<!-- MUESTRA DATOS-->	
 			<!--   <p id="mensaje"> . </p>		-->	
-			IMC : <input type="text" id="imc" name="imc" size=5" color="red"> <div> <p>  </p>	<div>			
-			     <input type="text" id="mensaje" name="mensaje" size="60" value="" > <div> <p>  </p>	<div>
+			Indice de Masa Corporal: <input type="text" id="imc" name="imc" size=22" color="red"> <div> <p>  </p>	<div>			
+			     <input type="text" id="mensaje" name="mensaje" size="45" value="" > <div> <p>  </p>	<div>
 			
 		</form>
 	</div>
@@ -75,16 +76,45 @@
 			document.getElementById("mensaje").style.backgroundColor = color;		
 	
 			//document.getElementById("mensaje").innerHTML = "Tu peso de " + peso +" kg para tu estatura se clasifica como: " + clasificación;	
-			document.getElementById("mensaje").value= "Tu peso de " + peso +" kg para tu estatura se clasifica como: " + clasificación;
+			//document.getElementById("mensaje").value= "Tu peso de " + peso +" kg para tu estatura se clasifica como: " + clasificación;
+			document.getElementById("mensaje").value=  clasificación;
 			
 			//document.getElementById("imc").style.color = color;
 			document.getElementById("imc").style.backgroundColor =color;
+			//document.getElementById("altura").style.backgroundColor =color;
+			//document.getElementById("peso").style.backgroundColor =color;
+			document.getElementById("divImag").style.backgroundColor =color;
+			
+			//document.body.style.backgroundColor = color;
 			//document.getElementById("imc").style.font.bold;//.fontsize(6)
 			//document.getElementById("imc").style.font.size=22;
 			
 			document.getElementById("imc").value = valorIMC;
 		}
 	</script>
+	
+	<script type = "text/javascript">
+	//JS para manejo de Boton de color. 
+	//Fuente: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#its_not_just_web_pages 
+	//const botonColor = document.getElementById("botonColor"); FUNCIONA
+	const botonColor = document.querySelector("#botonColor"); //FUNCIONA 
+
+	const tituloH1 = document.getElementById("tituloH1");
+	
+	function random(numero) {return Math.floor(Math.random() * numero + 1);  };
+	
+	botonColor.addEventListener('click',() => { 
+			//const randomColor = "rgba(240 180 12 / 60%)"; 
+			const randomColor1 = "rgba("+ random(255) +" " + random(255) + " "+ random(255) + " / "+ random(100) +"%)"; 
+			document.body.style.backgroundColor = randomColor1;
+			
+			const randomColor2 = "rgba("+ random(255) +" " + random(255) + " "+ random(255) + " / "+ random(100) +"%)";
+			tituloH1.style.color = randomColor2;
+			
+	}  );
+	
+	</script>
+	
 	
 	<!-- 1er script: codigo en propio html -->
 	<script> <!-- alert("js interno"); -->	</script>
