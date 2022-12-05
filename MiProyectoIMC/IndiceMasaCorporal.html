@@ -13,48 +13,52 @@
 	<body>
 	
 	<div class="divClass">
-		<i><h1 id=tituloH1 >  INDICE DE MASA CORPORAL						</h1></i>
-		<h2>  Calcula el IMC con la altura, peso y sexo  	</h2>
-		<h3>  Autor: Rodrigo Nov 2022        				</h3>		
+		<i><h1 id=tituloH1 >  INDICE DE MASA CORPORAL						</h1></i>			
 	</div>
 	
 	<!-- Marcombo 70       .....................................................................................-->
 	<!-- APLICA ESTILOS A DOS ELEMENTOS DE LA MISMA CLASE -->
 	<style>
 			.colorSelector {
-			width: 50px;
-			height: 50px;
+			width: 35px;
+			height: 25px;
 			float: left;
-			margin: 20px;
+			margin: 0px;
 			border-style: solid;
+			border-width: 1px;
 			}	
 	</style>
-	<div class="colorSelector" id="blanco" style="background-color:white" > </div>		
-	<div class="colorSelector" id="verde" style="background-color:cyan" > </div>	
-	<!-- FIN DE Marcombo 70.....................................................................................-->
 	
+	
+	<div class="colorSelector" id="titulo" style="background-color:white" <p>  T </p>  ></div>		
+	<div class="colorSelector" id="fondo" style="background-color:white" <p>  F </p> > </div>
+	<button id="botonColor" type ="button"> T&F </button>		
+	<input type="text" id="nombre" name="nombre" size="22" value=" < Colores de Título y Fondo" > 
+	
+	
+	<!-- FIN DE Marcombo 70.....................................................................................-->
+			
+	<div> <p>                                          
+
+	</p>	</div>
+	<div> <p>  </p>	</div>
 	
 	<div class="divClass">
 		<form name = "FormularioEntradaDatos" >		
-		
-			<!-- ENTRADA DE TEXTO-->
-			Ingrese su nombre (opcional): <input type="text" id="nombre" name="nombre" size="20" value="" >
-			<div> <p>  </p>	</div>
-		
+							
 			<!-- ENTRADA DE NUMEROS-->
-			Ingrese su peso                   (kg): <input type="number" id="peso" name = "peso" size="8" value="80"  min ="1" max="666" > <div> <p>  </p>	<div>
-			Ingrese su altura(cm): <input type="number" id="altura" name = "altura" size="8" value="180" min ="1" max="220" > <div> <p>  </p>	<div>
-			
-			Click para calcular IMC: <button  type ="button"  onkeydown="CalcularIMC()" onclick="CalcularIMC()"> Calcular IMC </button>			
-			Click para boludear: <button id="botonColor" type ="button"> Color </button>	<div> <p>  </p>	<div>		
+			Peso  (kg): <input type="number" id="peso" name = "peso" size="8" value="80"  min ="1" max="666" > 
+			Altura(cm): <input type="number" id="altura" name = "altura" size="8" value="180" min ="1" max="220" > 
+			<button  type ="button"  onkeydown="CalcularIMC()" onclick="CalcularIMC()"> Calcular </button>		<div> <p>  </p>	</div>	
 			
 			<!-- MUESTRA DATOS-->	
 			<!--   <p id="mensaje"> . </p>		-->	
-			Indice de Masa Corporal: <input type="text" id="imc" name="imc" size=22" color="red"> <div> <p>  </p>	<div>			
-			     <input type="text" id="mensaje" name="mensaje" size="45" value="" > <div> <p>  </p>	<div>
+			<input type="text" id="imc" name="imc" size=45" color="red"> <div> <p>  </p>	</div>			
+			<!--  <input type="text" id="mensaje" name="mensaje" size="45" value="" > <div> <p>  </p>	<div> -->
 							
 		</form>
 	</div>
+	
 
 	<div id = divImag class="divClass"> 				
 			<img src = "https://www.topdoctors.mx/files/Image/large/a7af528584b6475633cf9caf0b525518.jpeg" alt = "gráfico de IMC"/>
@@ -81,6 +85,7 @@
 				altura_cuadrado=altura_metros*altura_metros;
 			
 				valorIMC = Math.round(peso *10 / altura_cuadrado)/10;
+				
 				if (valorIMC > 0) {color = "blue"; clasificación = "Bajo peso";}
 				if (valorIMC > 18.5) {color = "green"; clasificación = "Peso promedio";}
 				if (valorIMC > 25) {color = "orange"; clasificación = "Sobrepeso";}
@@ -89,16 +94,23 @@
 				if (valorIMC > 40) {color = "violet"; clasificación = "Obesidad grado III";}
 				clasificación.bold(); //http://www.w3big.com/try/try.php?filename=tryjsref_str_style				
 					
-			document.getElementById("mensaje").style.backgroundColor = color;		
+			//document.getElementById("mensaje").style.backgroundColor = color;		
 	
-			//document.getElementById("mensaje").innerHTML = "Tu peso de " + peso +" kg para tu estatura se clasifica como: " + clasificación;				
-			document.getElementById("mensaje").value=  clasificación;
+			msgExtra1 = clasificación + " (IMC = " + peso + " / " + altura_metros + "^2 = " + valorIMC + " )";
+			msgExtra2 = clasificación ;
+			msgExtra3 = " Indice = " + valorIMC + " ( " + peso + " / " + altura_metros + " ^ 2" +  " )";
+
+			//document.getElementById("mensaje").value=  msgExtra2;			
+			document.getElementById("imc").value = msgExtra3 + " ---- " + msgExtra2 + " ---- ";
 			
 			document.getElementById("imc").style.backgroundColor =color;
 			document.getElementById("divImag").style.backgroundColor =color;
+			document.getElementById("peso").style.backgroundColor =color;
+			document.getElementById("altura").style.backgroundColor =color;
 			document.body.style.backgroundColor='white'; 
-	
-			document.getElementById("imc").value = valorIMC;
+			document.getElementById("titulo").style.backgroundColor = document.body.style.backgroundColor;
+			document.getElementById("fondo").style.backgroundColor = document.body.style.backgroundColor;		
+			
 		}
 	</script>
 	
@@ -119,31 +131,31 @@
 			const randomColor2 = "rgba("+ random(255) +" " + random(255) + " "+ random(255) + " / "+ random(100) +"%)";
 			document.body.style.backgroundColor = randomColor1;
 			tituloH1.style.color = randomColor2;	
-			divVerde.style.backgroundColor=randomColor1;	
-			divBlanco.style.backgroundColor=randomColor2;			
+			fondo.style.backgroundColor=randomColor1;	
+			//titulo.style.backgroundColor=randomColor2;			
 			
 	}  );	
 	</script>
 	
 	<script type = "text/javascript">
 	//AGREGA ESCUCHADORA A EVENTO 'click' DE LOS DIV COLOR PARA BOLUDEAR +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-	const divVerde = document.getElementById("verde"); 
-	const divBlanco = document.querySelector("#blanco"); 	
+	const fondo = document.getElementById("fondo"); 
+	const blanco = document.querySelector("#titulo"); 	
 	
 	function random(numero) {
 		return Math.floor(Math.random() * numero + 1); 
 	};
 	
-	divVerde.addEventListener('click',() => { 			
+	fondo.addEventListener('click',() => { 			
 			const randomColor1 = "rgba("+ random(255) +" " + random(255) + " "+ random(255) + " / "+ random(100) +"%)"; 
 			document.body.style.backgroundColor = randomColor1;		
-			divVerde.style.backgroundColor=randomColor1;
+			fondo.style.backgroundColor=randomColor1;
 	}  );	
 	
-	divBlanco.addEventListener('click',() => { 						
+	titulo.addEventListener('click',() => { 						
 			const randomColor2 = "rgba("+ random(255) +" " + random(255) + " "+ random(255) + " / "+ random(100) +"%)";
 			tituloH1.style.color = randomColor2;	
-			divBlanco.style.backgroundColor=randomColor2;
+			titulo.style.backgroundColor=randomColor2;
 	}  );		
 	</script>
 	
