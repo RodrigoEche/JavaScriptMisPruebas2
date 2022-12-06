@@ -3,16 +3,16 @@ function tablaDelSeis(){
     //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
     //Escribe tu código aquí  
 
-  
-  //array3.fill(0);
-  //array4 = array3.map(e => e.push(e.length))
+    var array1 = [];
+    for (i = 0; i <= 10; i++) array1.push(i);
+    var array2 = array1.map(  e => e * 6  )
 
-  //for (i = 0; i <= 10; i++) array.push(i);
-  //array2 = array.map(  e => e * 6  )
+    var array = new Array(11).fill(0);
+    var arrayMultiplos =  array.map(   ( e, index ) => index * 6   );  
+    var sumaMultiplos =  arrayMultiplos.reduce(   ( previo, actual, index ) => previo + actual  );  
+    var sumaManual = 0+6+12+18+24+30+36+42+48+54+60;
 
-  var array = new Array(11).fill(0);
-  var arrayMultiplos =  array.map(   ( e, index ) => index * 6   );  
-  return arrayMultiplos;
+    return {array1,array2,array,arrayMultiplos,sumaMultiplos, sumaManual };
   }
 
 
