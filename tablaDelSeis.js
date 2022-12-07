@@ -2,7 +2,6 @@ function tablaDelSeis(){
     //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
     //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
     //Escribe tu código aquí  
-
     var array1 = [];
     for (i = 0; i <= 10; i++) array1.push(i);
     var array2 = array1.map(  e => e * 6  )
@@ -14,8 +13,4 @@ function tablaDelSeis(){
 
     return {array1,array2,array,arrayMultiplos,sumaMultiplos, sumaManual };
   }
-
-
-  //lo de abajo no poner en el archivo origen
-  //tablaDelSeis()
-  console.log(tablaDelSeis())
+console.log(tablaDelSeis())

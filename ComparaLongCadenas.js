@@ -13,6 +13,10 @@ function tienenMismaLongitud(str1, str2) {
   }
 //..............................................................
 console.log( 'Resultado: '   +  tienenMismaLongitud('algo1','algo')      );
+
+// llamo la funcion sin sus () para que me muestre su definicion
+console.log( 'Resultado: '   +  tienenMismaLongitud      );
+
 //..............................................................
 
 
