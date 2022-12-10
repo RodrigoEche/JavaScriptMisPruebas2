@@ -1,0 +1,12 @@
+{
+"nombre":"Hidrógeno",
+"simbolo":"H",
+"numeroAtomico":1,
+"pesoAtomico":1.0079,
+"puntoEbullicion_K":20.268,
+"puntoFusion_K":14.025,
+"densidad_gcm3_300K":0.0899,
+"estadosOxidacion":[1],
+"configuracionElectronica":"1s1",
+"estado":"gaseoso"
+}
