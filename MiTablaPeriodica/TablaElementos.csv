@@ -1,0 +1,11 @@
+nombre;simbolo;numero_atomico;peso_atomico;estado;densidad_gcm3;tempFusion_K;tempEbullicion_K;usos
+Hidrogeno;H;1;1,00790;gas;0,0899;20;14;Energía, explosiones, propulsión
+Helio;He;2;4,00260;gas;0,1787;4;1;Globos
+Litio;Li;3;6,94100;sol;;;;Baterías
+Berilio;Be;4;9,01218;sol;;;;
+Boro;B;5;10,81000;sol;;;;
+Carbono;C;6;12,01100;sol;;;;
+Nitrogeno;N;7;;gas;1,251;;;
+Oxigeno;O;8;;gas;1,429;90;50;
+Fluor;F;9;;gas;;;;
+Neon;Ne;10;;gas;;27;24;
