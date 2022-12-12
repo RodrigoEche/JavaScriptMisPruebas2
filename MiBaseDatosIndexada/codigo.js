@@ -1,11 +1,13 @@
 // BASE DE DATOS INDEXADAS Sacado de "El gran libro de HTML5, CSS3 y JavaScript". Marcombo 2017 pag 485  
 // Rodrigo 6 Dic 2022
 var cajadatos, bd;
+boton =  document.getElementById("agregar");
+
 boton.addEventListener("click",   function() {alert("En construcción. Disculpe las molestias2.")}   );
 
 function iniciar() {
 	cajadatos = document.getElementById("cajadatos");	
-	boton =  document.getElementById("grabar");
+	boton =  document.getElementById("agregar");
 	boton.addEventListener("click", agregarObjeto   );
 	
 	//.open() abre o intenta abrir la BD y devuelve el objeto "solicitud" que desencadena uno de los tres eventos posibles "error" "succes" u "upgradeneeded"
@@ -44,7 +46,7 @@ function crearbd(evento){
 //4
 function agregarObjeto(){
 	var clave = document.getElementById("clave").value;
-	var titulo = document.getElementById("titulo").value;
+	var titulo = document.getElementById("texto").value;
 	var fecha = document.getElementById("fecha").value;
 
 	var transaccion = bd.transaction(["peliculasAlmacen"], "readwrite");
@@ -54,6 +56,6 @@ function agregarObjeto(){
 	var solicitud = almacen.add( { id: clave, nombre: titulo, fecha: fecha} );
 
 	document.getElementById("clave").value = "";
-	document.getElementById("titulo").value = "";
+	document.getElementById("texto").value = "";
 	document.getElementById("fecha").value = "";
 }
