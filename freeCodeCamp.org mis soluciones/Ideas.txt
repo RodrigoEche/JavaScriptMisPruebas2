@@ -1,0 +1,32 @@
+
+Dic 31-2022
+Desafio 1:
+Escribir codigo en JS (tirarUnDado.js) para mostrar en consola los numeros al azar de un dado
+Usar un metodo del objeto Math para generar los numeros aleatorios
+Agregar mas dados (tirarDosDados.js adentro con const CANTIDAD_DADOS = 2;)
+Salida en consola de windows
+Hacer que salga en consola de cualquier navegador para poder pasar el script a cualquier persona
+Hacer que el usuario pueda elegir la cantidad de dados.
+
+Desafio 2:
+Tirar dados pero en version html simple
+Poner boton que se llame "Lanzar dados"
+Usar texto o parrafos para cada numero generado <p id="dado1"> </p>
+Poner texto que cada vez que sale 6 y 6 ponga "Doblete ganador" etc
+
+Desafio 3:
+Tirar dados pero en version html mas compleja
+Poner boton que se llame "Lanzar dados"
+Usar texto o parrafos para cada numero generado <p id="dado1"> </p>
+Poner texto que cada vez que sale 6 y 6 ponga "Doblete ganador" etc
+Elegir imagen segun numero del dado de entre seis imagenes (ver los dados)
+
+Desafio 4:
+Subir la pagina web a un servidor gratis.
+
+
+
+
+
+
+
