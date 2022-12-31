@@ -1,0 +1,23 @@
+----------- EDITORES DE CODIGO -------------------------------------------------------
+
+NOTEPAD
+viene con Windows
+
+NOTEPAD++
+https://notepad-plus-plus.org
+
+VISUAL STUDIO CODE
+https://code.visualstudio.com/download
+
+----------- MOTOR DE JAVASCRIPT -------------------------------------------------------
+NODE
+https://nodejs.org/es/ (version LTS)
+
+----------- ADMINISTRADOR DE VERSIONES DE CODIGO --------------------------------------
+GIT
+https://git-scm.com (En instalacion Elegir Editor VSCode e Integrar GitBash al boton derecho mouse)
+
+----------- ALMACENAMIENTO DE VERSIONES DE CODIGO -------------------------------------
+GITHUB
+https://github.com (No descargar nada. Crear cuenta con  Usuario/Clave/Email, crear token tiempo ilimitado)
+

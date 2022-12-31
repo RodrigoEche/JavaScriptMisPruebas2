@@ -1,0 +1,91 @@
+<!--  Usar:  </>  <>   </script>   <!-- -->     <!-- -->
+	<!-- algo verde       .....................................................................................-->
+	
+<!-- +++++++++++++++++++++++++++ HEAD +++++++++++++++++++++++++++ --> 
+<html>
+	<head>
+		<title> Acá se pone un título</title>		
+		
+		<link href="./recursos/semaforo.ico" 	rel="shortcut icon" />
+		
+		<!-- Usa estilos definidos en archivo .css por fuera del archivo .html -->
+		<link href="./estilo.css"   			rel="stylesheet" 	/>		
+		
+		
+	</head>
+
+<!-- +++++++++++++++++++++++++++ CUERPO +++++++++++++++++++++++++++ -->
+	<body>
+	
+	<!-- Usa codigo escrito en el mismo archivo .html -->
+	<script>  alert("CODIGO JAVASCRIPT ESCRITO EN MISMO ARCHIVO HTML"); 	 	</script>
+	
+	<!-- Usa codigo almacenado en archivo .js por fuera del archivo .html -->
+	<script src="./codigo.js"> 			    									</script>	
+		
+
+	
+	
+	<div class="divClass">
+		<i><h1 id=tituloH1 >  INDICE DE MASA CORPORAL						</h1></i>			
+	</div>
+	
+	<!-- Marcombo 70       .....................................................................................-->
+	<!-- APLICA ESTILOS A DOS ELEMENTOS DE LA MISMA CLASE -->
+	<style>
+			.colorSelector {
+			width: 35px;
+			height: 25px;
+			float: left;
+			margin: 0px;
+			border-style: solid;
+			border-width: 1px;
+			}	
+	</style>
+	
+	
+	<div class="colorSelector" id="titulo" style="background-color:white" <p>  T </p>  ></div>		
+	<div class="colorSelector" id="fondo" style="background-color:white" <p>  F </p> > </div>
+	<button id="botonColor" type ="button"> T&F </button>		
+	<input type="text" id="nombre" name="nombre" size="22" value=" < Colores de Título y Fondo" > 
+	
+	
+	<!-- FIN DE Marcombo 70.....................................................................................-->
+			
+	<div> <p>                                          
+
+	</p>	</div>
+	<div> <p>  </p>	</div>
+	
+	<div class="divClass">
+		<form name = "FormularioEntradaDatos" >		
+							
+			<!-- ENTRADA DE NUMEROS-->
+			Peso  (kg): <input type="number" id="peso" name = "peso" size="8" value="80"  min ="1" max="666" > 
+			Altura(cm): <input type="number" id="altura" name = "altura" size="8" value="180" min ="1" max="220" > 
+			<button  type ="button"  onkeydown="CalcularIMC()" onclick="CalcularIMC()"> Calcular </button>		<div> <p>  </p>	</div>	
+			
+			<!-- MUESTRA DATOS-->	
+			<!--   <p id="mensaje"> . </p>		-->	
+			<input type="text" id="imc" name="imc" size=45" color="red"> <div> <p>  </p>	</div>			
+			<!--  <input type="text" id="mensaje" name="mensaje" size="45" value="" > <div> <p>  </p>	<div> -->
+							
+		</form>
+	</div>
+	
+
+	<div id = divImag class="divClass"> 				
+			<img src = "https://www.topdoctors.mx/files/Image/large/a7af528584b6475633cf9caf0b525518.jpeg" alt = "gráfico de IMC"/>
+			<img src = "./imagen-IMC.png" alt = "tabla de IMC"/>
+	</div>
+			<ul><span id="spanId"> Ver tema en  </span>
+			<a href="https://www.topdoctors.mx/diccionario-medico/indice-de-masa-corporal-imc">TopDoctors</a>		</ul>	
+	
+	
+
+	
+
+	
+	</body>	
+</html>
+<!-- +++++++++++++++++++++++++++ FIN ARCHIVO +++++++++++++++++++++++++++ -->

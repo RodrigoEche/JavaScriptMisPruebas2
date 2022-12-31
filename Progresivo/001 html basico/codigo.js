@@ -1,75 +1,9 @@
-<!--  Usar:  </>  <>   </script>   <!-- -->     <!-- -->
-	<!-- algo verde       .....................................................................................-->
-	
-<!-- +++++++++++++++++++++++++++ HEAD +++++++++++++++++++++++++++ --> 
-<html>
-	<head>
-		<title> un title: JS interno y externo </title>
-		<link href="./prueba.css"   rel="stylesheet" />		
-		<link href="./semaforo.ico" rel="shortcut icon" />
-	</head>
+// JS asociado a html
 
-<!-- +++++++++++++++++++++++++++ CUERPO +++++++++++++++++++++++++++ -->
-	<body>
-	
-	<div class="divClass">
-		<i><h1 id=tituloH1 >  INDICE DE MASA CORPORAL						</h1></i>			
-	</div>
-	
-	<!-- Marcombo 70       .....................................................................................-->
-	<!-- APLICA ESTILOS A DOS ELEMENTOS DE LA MISMA CLASE -->
-	<style>
-			.colorSelector {
-			width: 35px;
-			height: 25px;
-			float: left;
-			margin: 0px;
-			border-style: solid;
-			border-width: 1px;
-			}	
-	</style>
-	
-	
-	<div class="colorSelector" id="titulo" style="background-color:white" <p>  T </p>  ></div>		
-	<div class="colorSelector" id="fondo" style="background-color:white" <p>  F </p> > </div>
-	<button id="botonColor" type ="button"> T&F </button>		
-	<input type="text" id="nombre" name="nombre" size="22" value=" < Colores de Título y Fondo" > 
-	
-	
-	<!-- FIN DE Marcombo 70.....................................................................................-->
-			
-	<div> <p>                                          
+alert("js externo");
 
-	</p>	</div>
-	<div> <p>  </p>	</div>
-	
-	<div class="divClass">
-		<form name = "FormularioEntradaDatos" >		
-							
-			<!-- ENTRADA DE NUMEROS-->
-			Peso  (kg): <input type="number" id="peso" name = "peso" size="8" value="80"  min ="1" max="666" > 
-			Altura(cm): <input type="number" id="altura" name = "altura" size="8" value="180" min ="1" max="220" > 
-			<button  type ="button"  onkeydown="CalcularIMC()" onclick="CalcularIMC()"> Calcular </button>		<div> <p>  </p>	</div>	
-			
-			<!-- MUESTRA DATOS-->	
-			<!--   <p id="mensaje"> . </p>		-->	
-			<input type="text" id="imc" name="imc" size=45" color="red"> <div> <p>  </p>	</div>			
-			<!--  <input type="text" id="mensaje" name="mensaje" size="45" value="" > <div> <p>  </p>	<div> -->
-							
-		</form>
-	</div>
-	
-
-	<div id = divImag class="divClass"> 				
-			<img src = "https://www.topdoctors.mx/files/Image/large/a7af528584b6475633cf9caf0b525518.jpeg" alt = "gráfico de IMC"/>
-			<img src = "./imagen-IMC.png" alt = "tabla de IMC"/>
-	</div>
-			<ul><span id="spanId"> Ver tema en  </span>
-			<a href="https://www.topdoctors.mx/diccionario-medico/indice-de-masa-corporal-imc">TopDoctors</a>		</ul>	
 	
 	
-	<!-- 0 script: codigo en propio html -->
-	<script type = "text/javascript">
 		var colorcito = "#5DBB95"; //https://es.stackoverflow.com/questions/438403/cambiar-colores-del-input-con-js
 		var colorcite = "#BBA65D";
 		
@@ -112,9 +46,9 @@
 			document.getElementById("fondo").style.backgroundColor = document.body.style.backgroundColor;		
 			
 		}
-	</script>
 	
-	<script type = "text/javascript">
+	
+	
 	//AGREGA ESCUCHADORA A EVENTO 'click' DEL BOTON COLOR PARA BOLUDEAR
 	//Fuente: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#its_not_just_web_pages 
 	//const botonColor = document.getElementById("botonColor"); FUNCIONA
@@ -135,9 +69,9 @@
 			//titulo.style.backgroundColor=randomColor2;			
 			
 	}  );	
-	</script>
+
 	
-	<script type = "text/javascript">
+	
 	//AGREGA ESCUCHADORA A EVENTO 'click' DE LOS DIV COLOR PARA BOLUDEAR +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	const fondo = document.getElementById("fondo"); 
 	const blanco = document.querySelector("#titulo"); 	
@@ -157,10 +91,10 @@
 			tituloH1.style.color = randomColor2;	
 			titulo.style.backgroundColor=randomColor2;
 	}  );		
-	</script>
+
 	
 	
-	<script type = "text/javascript">
+
 	//AGREGA ESCUCHADORA A EVENTO TECLA ENTER PRESIONADA EN CAJAS DE TEXTO DE PESO Y ALTURA 
 	peso = document.getElementById("peso");
 	altura = document.getElementById("altura");
@@ -171,16 +105,6 @@
 	altura.addEventListener('change',e=>{   { CalcularIMC(); document.body.style.backgroundColor='white';   };   })
 	button.addEventListener('click', () => {   CalcularIMC();document.body.style.backgroundColor='white';   })
 	
-	</script>
-	
-	
-	
-	<!-- 1er script: codigo en propio html -->
-	<script> <!-- alert("js interno"); -->	</script>
 
-	<!-- 2do script: llama codigo fuera html -->
-	<script src="./prueba.js"> 			    </script>
 	
-	</body>	
-</html>
-<!-- +++++++++++++++++++++++++++ FIN ARCHIVO +++++++++++++++++++++++++++ -->
+	
