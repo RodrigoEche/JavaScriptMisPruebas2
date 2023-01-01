@@ -8,12 +8,13 @@ function rellenaArrayUsandoExtremos(array) {
     return arraySalida; */
     const cantidadElementos     =   1 + array[1] - array[0];
     const arraySalida           =  new Array(cantidadElementos);
-    arraySalida.fill(0);
-    arraySalida.forEach(    (valor,indice)   =>   arraySalida[indice] = indice + array[0]  );
+    //arraySalida.fill(0);
+    //arraySalida.forEach(    (valor,indice)   =>   arraySalida[indice] = indice + array[0]  );
+    arraySalida.fill(0).map(    (valor,indice)   =>   arraySalida[indice] = indice + array[0]  );
     return arraySalida; 
   }   //Fin de funcion ()
-    
-    const array = [-1, 4];
+
+    const array = [-1, 3];
     console.log("\nArray de entrada: ");
     console.log(array);
     console.log("\nArray de salida: ");
