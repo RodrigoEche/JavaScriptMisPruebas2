@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>DOM</title>
+    <meta name="description" content="DOM">
+</head>
+
+<body>
+    <img src="Carita0.png" />        <img src="Carita1.png" />        <img src="Carita2.png" />        <img src="Carita3.png" />        <img src="Carita4.png" />        <img src="Carita5.png" />        <img src="Carita6.png" />    <form id='miFormulario'>        <button type="button" onclick='aplicaEliminaBorde()' id="borde">Aplica</button>    </form>    <script type="text/Javascript">       let hayBorde = false;       function aplicaEliminaBorde() {           let imágenes = document.images;           if (!hayBorde) {               document.getElementById('borde').innerHTML = 'Elimina';               for (let i = 0; i < imágenes.length; i++) {                   imágenes[i].style.border = 'solid';               }               hayBorde = true;           }           else {               document.getElementById('borde').innerHTML = 'Metti';               for (let i = 0; i < imágenes.length; i++) {                   imágenes[i].style.border = 'none';               }               hayBorde = false;           }       }  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+    <title>DOM</title>
+    <meta name="description" content="DOM">
+</head>
+
+<body>
+    <a id="sos-office" href="http://www.sos-office.it/" target="_blank">SOS-Office</a>    
+    <form id='mioForm'>
+        <button type="button" onclick="rimuoviTarget()">Svuota titolo</button>
+    </form>
+    <script type="text/Javascript">
+    'use strict'
+        function rimuoviTarget(){
+           let link = document.getElementById('sos-office')
+           link.removeAttribute('target');
+        }
+    </script>
+
+</body>
+
+</html>

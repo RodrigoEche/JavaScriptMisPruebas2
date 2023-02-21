@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>window</title>
+
+</head>
+
+<body>
+    <style>        #CerrarVentana {            visibility: hidden;        }    </style>    <p>Para más información, haz clic        <span onclick="abre()" style="cursor:pointer">aquí</span></p>    <button type="button" onClick="cerrar()" id="cerrarVentana">cerrar info    </button>    <script>        function abre() {            document.getElementById('cerrarVentana').style.visibility = 'visible';            let ventanaPopup = open('info.html', 'info', 'width=300,height=300,            left=100,top=100');        };        function ocultaBotón() {            document.getElementById('cerrarVentana').style.visibility = 'hidden';        }        function cerrar() {                document.getElementById('cerrarVentana').style.visibility = 'hidden';window.close(ventanaPopup);        }    </script>
+</body>
+
+</html>

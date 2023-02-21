@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Temporizacion</title>
+
+</head>
+
+<body>    
+    <button onclick="interrumpir()">Interrumpe</button>    <button onclick="reiniciar()">Reinicia</button>    <p id="reloj"></p>    <script>        let intervalo = setInterval(reloj, 1000);        function reloj() {            let fecha= new Date();            let hora = data.getHours();            let minutos = data.getMinutes();            let segundos = data.getSeconds();            document.getElementById('reloj').innerHTML =             `${hora}:${minutos}:${segundos}`;        }        function interrumpir(){            clearInterval(intervalo);        }        function reiniciar(){            intervalo = setInterval(reloj, 1000);        }    </script>
+</body>
+
+</html>

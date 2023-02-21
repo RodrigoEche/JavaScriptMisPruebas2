@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html lang='es'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Objetos avanzados</title>
+    <meta name='description' content='Objetos avanzados'>
+</head>
+
+<body>
+
+<p id='output'>Ver los mensajes en la consola del navegador</p>
+
+<script type='text/Javascript'>
+
+    const persona = {
+        nome: 'Juan',
+        cognome: 'Márquez',
+        sexo: 'masculino',
+        vivo: true,
+        edada: 27,
+        dirección: {
+            calle: 'Buenos ratos 18',
+            población: 'Castelldefels',
+            provincia: 'Barcelona',
+            CP: '08060'
+        },
+        númerosTeléfono: [
+            {tipo: 'casa', número: '0000000'},
+            {tipo: 'móvil', número: '111111111'}
+        ],
+        títulos: ['sr.’, 'dr.’]
+    };
+
+    const nominativo = p => {
+        const nombre = p.nobrme;
+        const apellido = p.apellido;
+        const primerTítulo = p.títulos[0];
+        const segundoTítulo = p`.títulos[1];
+        return `${segundoTítulo || primerTítulo} ${apellido} ${nombre}`;
+    };
+
+    console.log(nominativo(persona));
+
+</script>
+
+</body>
+
+</html>

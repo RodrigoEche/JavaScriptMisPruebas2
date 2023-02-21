@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>DOM</title>
+    <meta name="description" content="DOM">
+</head>
+
+<body class='medio general'>
+    <div id="miDiv">
+    <p>uno</p>
+    <p>due</p>
+</div>
+    <form id='miFormulario'>
+        <button type="button" onclick="analiza()">Analiza nodos</button>
+</form>
+    <script type="text/Javascript">
+    'use strict'
+        function analiza() {           let hijos = document.getElementById('miDiv').children;           for (let i = 0; i < hijos.length; i++){              hijos[i].style.backgroundColor = "yellow";            }}
+    </script>
+</body>
+
+</html>

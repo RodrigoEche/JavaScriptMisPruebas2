@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>DOM</title>
+    <meta name="description" content="DOM">
+</head>
+
+<body>
+    <ul id='platos'>        <li>Pizza</li>        <li>Lasaña</li>        <li>Arroz</li>        <li>Pasta</li>        <li>Sopa</li>    </ul>    <form id='miFormulario'>        <button type="button" onclick="eliminaUltima()">Elimina la última opción</button>    </form>    <script type="text/Javascript">    'use strict'        function eliminaUltima(){           let lista = document.getElementById('platos');           lista.removeChild(lista.lastElementChild);        }    </script>
+
+</body>
+
+</html>

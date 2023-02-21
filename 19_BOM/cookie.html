@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Cookie</title>
+
+</head>
+
+<body>
+    <p id="saludo"></p>
+
+    <script type="text/Javascript">
+        let ultimaVisita = new Date(); //recupero la data dell'ultima visita
+        ultimaVisita.setMonth(ultimaVisita.getMonth() - 3); //aggiungo 3 mesi alla data dell'ultima visita
+        let scadenza = ultimaVisita.toUTCString(); //converto in stringa con formato UTC la data di scadenza
+        //document.cookie = 'Username=Alessandra Salvaggio; expires=' + cExpires; 
+        
+        //document.cookie = 'username=Alessandra';
+        //document.cookie= 'username=' + encodeURIComponent('Alessandra Salvaggio');
+        //document.cookie = 'username=Alessandra; expires=Sun, 31 Dec 2017:00:00:00 GMT';
+        document.cookie = 'username=; expires=' + scadenza; 
+       
+        let stringaCookie = document.cookie;
+        let arrayCookie = decodeURIComponent(document.cookie).split(';');
+        
+        console.log(stringaCookie);
+
+    </script>
+
+</body>
+
+</html>

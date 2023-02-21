@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Finestre</title>
+
+</head>
+
+<body>
+    <div id='info'></div>    <script>        let info = `<strong>nombre browser:</strong> ${navigator.appName} </br>        <strong>nome código browser:</strong> ${navigator.appCodeName} </br>        <strong>motor browser:</strong> ${navigator.product} </br>        <strong>versión browser:</strong> ${navigator.appVersion} </br>        <strong> idioma browser: </strong>${navigator.language} </br>        <strong> nombre plataforma:</strong> ${navigator.platform} </br>        <strong> nombre userAgent:</strong> ${navigator.userAgent}`;        document.getElementById('info').innerHTML = info;    </script>
+</body>
+
+</html>

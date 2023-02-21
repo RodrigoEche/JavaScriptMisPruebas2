@@ -1,0 +1,31 @@
+<!doctype html>
+
+<html lang='es'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Parámetros rest</title>
+    <meta name='description' content='Parámetros rest'>
+</head>
+
+<body>
+
+<p id='output'>Ver los mensajes en la consola del navegador</p>
+
+<script type='text/Javascript'>
+
+    const escala = function (escala, ...números) {
+        console.log('escala=' + escala);
+        console.log('números=' + números);
+        return números.map(n => escala * n);
+    }
+    console.log(escala()); // []
+    console.log(escala(1.10));  // []
+    console.log(escala(1.15, 2));  // [2.3]
+    console.log(escala(1.15, 2, 3));  // [2.3, 3.4499999999999997]
+
+</script>
+
+</body>
+
+</html>

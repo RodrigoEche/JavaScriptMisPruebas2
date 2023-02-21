@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>DOM</title>
+    <meta name="description" content="DOM">
+</head>
+
+<body>
+    <h1 id='título' style="background-color:yellow">texto</h1>    <form id='miForm'>        <button type="button" onclick="quitarTítulo()">Quitar título</button>    </form>    <script type="text/Javascript">    'use strict'        function quitarTítulo(){            let título = document.getElementById('título');            título.removeChild(título.lastChild);        }    </script>
+
+</body>
+
+</html>

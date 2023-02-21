@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>DOM</title>
+    <meta name="description" content="DOM">
+</head>
+
+<body>
+    <h1>haz clic sobre una imagen para eliminarla</H1>    <p id='recuento'></p>    <img src="Carita0.png" />    <img src="Carita1.png" />    <img src="Carita2.png" />    <img src="Carita3.png" />    <img src="Carita4.png" />    <img src="Carita5.png" />    <img src="Carita6.png" />    <script type="text/Javascript">        let pRecuento = document.getElementById('recuento');        let imagenes = document.images;        pRecuento.innerHTML = `En la página hay ${imagenes.length} imágenes`;        for (let i = 0; i < imagenes.length; i++) {            imagenes[i].addEventListener('click', function () {                this.remove();                pRecuento.innerHTML = `En la página hay ${imagenes.length}                 imágenes`;            })        }    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+
+<html lang='es'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Operador spread</title>
+    <meta name='description' content='Operador spread'>
+</head>
+
+<body>
+
+<p id='output'>Ver los mensajes en la consola del navegador</p>
+
+<script type='text/Javascript'>
+
+    const mesesInvernales = ['Dic', 'Ene', 'Feb'];
+    const mesesEstivales = ['Jun', 'Jul', 'Ago'];
+    const mesesEstivalesInvernales = [ ... mesesInvernales, ... mesesEstivales];
+
+    console.log(`Todos los meses: ${mesesEstivalesInvernales}`);
+
+</script>
+
+</body>
+
+</html>

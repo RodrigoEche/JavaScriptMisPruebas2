@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>DOM</title>
+    <meta name="description" content="DOM">
+</head>
+<body>
+<style>
+        div {
+          box-sizing: border-box;
+          padding: 16px;
+          width: 100%;
+          border-style: solid;          
+        }
+        #cerrar {
+          float: right;
+          font-size: 20px;
+          font-weight: bold;
+          border-style: solid;
+          width: 25px;
+          height: 25px;
+          cursor: pointer;
+          text-align: center;
+        }
+        
+        </style>     
+       <div>
+          <span  id="cerrar">&times;</span>
+          <p>Lorem ipsum dolor sit amet, latine intellegat cu est, sed nisl qualisque at. Ut pro sale euismod delectus. Ea sit quaestio
+                instructior, per te purto commodo. Est tale epicuri voluptaria an, sea et exerci legimus. Ne vel prima nonumes deterruisset.
+                Errem dignissim no pro..</p>
+        </div>
+        <script>            document.getElementById('cerrar').addEventListener('click', cerrar)            function cerrar() {                this.parentNode.style.display = 'none';            }        </script>
+        </body>
+
+</html>

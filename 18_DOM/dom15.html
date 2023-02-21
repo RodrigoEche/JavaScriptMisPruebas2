@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>DOM</title>
+    <meta name="description" content="DOM">
+</head>
+
+<body>
+    <ul id='platos'>        <li>Pizza</li>        <li>Lasaña</li>        <li>Arroz</li>        <li>Psta</li>        <li>Sopa</li>    </ul>    <form id='miFormulario'>        <button type="button" onclick="duplicaPrimero()">CLona la primera opción</button>    </form>    <script type="text/Javascript">    'use strict'        function duplicaPrimero(){           let lista = document.getElementById('platos');           let pizza = lista.firstElementChild;           let pizza2 = pizza.cloneNode(true);           lista.appendChild(pizza2);        }    </script>
+
+</body>
+
+</html>

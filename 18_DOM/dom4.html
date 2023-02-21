@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>DOM</title>
+    <meta name="description" content="DOM">
+</head>
+
+<body class='medio general'>
+    <div id="miDiv">    <p>uno</p>    <p>dos</p></div>    <form id='miFormulario'>        <button type="button" onclick="analiza()">Analiza nodos</button></form>    <script type="text/Javascript">        function analiza() {            let hijos = document.getElementById('miDiv').childNodes;            console.log(`número hijos: ${hijos.length}`);           for (let i = 0; i < hijos.length; i++){            console.log(hijos[i]);            }        }    </script>
+</body>
+
+</html>

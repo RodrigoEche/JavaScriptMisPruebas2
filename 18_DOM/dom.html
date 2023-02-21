@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>DOM</title>
+    <meta name="description" content="DOM">
+</head>
+
+<body>
+    <ul>
+        <li>Uno</li>
+        <li>Dos</li>
+        <li>Tres</li>
+    </ul>
+    <form id='miFormulario'>
+        <button type="button" onclick='traduceNúmeros(español)'>español</button>
+        <button type="button" onclick='traduceNúmeros(inglés)'>inglés</button>
+        <button type="button" onclick='traduceNúmeros(italiano)'>italiano</button>
+    </form>
+
+    <script type="text/Javascript">
+        const español = ['uno', 'dos', 'tres'];
+        const inglés = ['one', 'two', 'three'];
+        const italiano = ['uno', 'due', 'tre'];
+
+        function traduceNúmeros(idioma) {
+            let elementosLI = document.getElementsByTagName("LI");
+
+            for (let i = 0; i < elementosLI.length; i++) {
+                elementosLI[i].innerHTML = idioma[i];
+            }
+        }
+    </script>
+
+</body>
+
+</html>

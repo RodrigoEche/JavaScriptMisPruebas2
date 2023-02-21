@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+    <title>Cookie</title>
+
+</head>
+
+<body>
+    <p id="saluto"></p>
+
+<script type="text/Javascript" src="funzCookie.js"></script>
+<script>
+    impostaCookie('residenza','Certosa di Pavia', 9);
+    let utente = leggiCookie('username');
+
+    console.log(document.cookie.split(';'));
+</script>
+   
+
+</body>
+
+</html>

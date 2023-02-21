@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Pantalla</title>
+
+</head>
+
+<body>
+    <div id='info'></div>    <script>        let info = `<strong>anchura pantalla:</strong> ${screen.width} </br>        <strong>altura pantalla:</strong> ${screen.height} </br>        <strong>anchura útil pantalla:</strong> ${screen.availWidth} </br>        <strong>altura útil pantalla:</strong> ${screen.availHeight} </br>        <strong>profundidad de color:</strong> ${screen.colorDepth} </br>`;        document.getElementById('info').innerHTML = info;    </script>
+</body>
+
+</html>

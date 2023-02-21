@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>DOM</title>
+    <meta name="description" content="DOM">
+</head>
+
+<body>
+    <div id="miDiv">        <p id="p1">Primer párrafo</p>        <p id="p2">Segundo párrafo</p>    </div>    <form id='miFormulario'>        <button type="button" onclick="crea()">Crea nuevo párrafo</button>    </form>    <script>        function crea() {            let parrafo = document.createElement("p");            let nodoTexto = document.createTextNode("Nuevo párrafo");            parrafo.appendChild(nodoTexto);            document.getElementById("miDiv").appendChild(parrafo);        }    </script>
+
+</html>

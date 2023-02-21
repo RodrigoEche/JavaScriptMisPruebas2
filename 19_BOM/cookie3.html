@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Cookie</title>
+
+</head>
+
+<body>    <p id="saludo"></p><script type="text/Javascript" src="funcCookie.js"></script><script>    let nombreUsuario = leeCookie('username');    if (nombreUsuario != '') {        document.getElementById('saludo').innerHTML = `Hola ${nombreUsuario}`;    } else {        nombreUsuario = prompt('No te conozco. Escribe tu nombre:', '');        if (nombreUsuario != '' && nombreUsuario != null) {            configuraCookie('username', nombreUsuario, 3);        }    }</script>
+   
+
+</body>
+
+</html>

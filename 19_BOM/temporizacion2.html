@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Temporización</title>
+
+</head>
+
+<body>
+    <button onclick="retraso=setTimeout(saluda, 3000)">Prueba</button>    <button onclick="interrumpe()">Interrumpe</button>    <script>        function saluda() {            alert('Hola');        }        function interrumpe() {            clearTimeout(retraso);        }    </script>
+</body>
+
+</html>

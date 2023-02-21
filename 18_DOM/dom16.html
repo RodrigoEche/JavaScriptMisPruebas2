@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>DOM</title>
+    <meta name="description" content="DOM">
+</head>
+
+<body>
+    <style>        li {            cursor: pointer;        }    </style>    <ul id='platos'>        <li value="pizza.png">Pizza</li>        <li value="hamburguesa.png">Hamburguesa</li>        <li value="pasta.png">Pasta</li>        <li value="sopa.png">Sopa</li>    </ul>    <img src="" id="imagen" />    <script type="text/Javascript">    'use strict'        document.getElementById("platos").addEventListener("click", function(e) {        if(e.target && e.target.nodeName == "LI") {          document.getElementById('imagen').setAttribute('src',           e.target.getAttribute('value'));            }    });    </script>
+
+    <!-- NOTA Los iconos utilizados en este ejercicio han sido diseñados por Freepik y descargados desde el sitio www.flaticon.com. -->
+</body>
+
+</html>
